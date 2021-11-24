@@ -148,4 +148,66 @@ insert into VELO values (112,'Eovolt',87892,'01-FAB-17',65,10)
 insert into VELO values (113,'Eovolt',328246,'01-JAN-19',75,7)
 insert into VELO values (114,'Eovolt',6596472,'01-JAN-19',75,1)
 
+--USAGERS
+
+
+insert into USAGER values (  1 , 'MONTAND'   , 'YVES'        , '  ' , '13-OCT-21' ) ;
+insert into USAGER values (  2 , 'GARCIA'    , 'NICOLE'      , '  ' , '21-FEB-15' ) ;
+insert into USAGER values (  3 , 'VILLERET'  , 'JACQUES'     , '  ' , '06-FEB-16' ) ;
+insert into USAGER values (  4 , 'DUBOIS'    , 'MARIE'       , '  ' , '12-FEB-13' ) ;
+insert into USAGER values (  5 , 'SCHNEIDER' , 'ROMY'        , '  ' , '01-APR-12' ) ;
+insert into USAGER values (  6 , 'FREY'      , 'SAMY'        , '  ' , '24-MAY-17' ) ;
+insert into USAGER values (  7 , 'RICARDO'   , 'BRUNOZZI'    , '  ' , '08-APR-18' ) ;
+insert into USAGER values (  8 , 'DUPRILLOT' , 'JOHEL'       , '  ' , '24-APR-18' ) ;
+insert into USAGER values (  9 , 'LESTRADOS' , 'DOMINIQUOS'  , '  ' , '19-FEB-19' ) ;
+insert into USAGER values ( 10 , 'DELON'     , 'ALAIN'       , '  ' , '04-OCT-13' ) ;
+insert into USAGER values ( 11 , 'VENTURA'   , 'LINO'        , '  ' , '01-JAN-11' ) ;
+insert into USAGER values ( 12 , 'MASSARI'   , 'LEA'         , '  ' , '01-JAN-15' ) ;
+insert into USAGER values ( 13 , 'POIRET'    , 'JEAN'        , '  ' , '01-JAN-17' ) ;
+insert into USAGER values ( 14 , 'CLUZET'    , 'FRANCOIS'    , '  ' , '01-JAN-21' ) ;
+insert into USAGER values ( 15 , 'MALAVOY'   , 'CHRISTOPHE'  , '  ' , '01-JAN-21' ) ;
+insert into USAGER values ( 16 , 'BOURVIL'   , 'BOURVIL'     , '  ' , '01-JAN-19' ) ;
+insert into USAGER values ( 17 , 'ROBERT'    , 'YVES'        , '  ' , '01-JAN-20' ) ;
+insert into USAGER values ( 18 , 'MANESSE'   , 'GASPARD'     , '  ' , '01-JAN-15' ) ;
+insert into USAGER values ( 19 , 'BELLI'     , 'AGOSTINA'    , '  ' , '01-JAN-17' ) ;
+insert into USAGER values ( 20 , 'BRASSEUR'  , 'CLAUDE'      , '  ' , '01-JAN-16' ) ;
+insert into USAGER values ( 21 , 'MARLAUD'   , 'PHILIPPE'    , '  ' , '01-JAN-18' ) ;
+insert into USAGER values ( 22 , 'BELMONDO'  , 'JEAN-PAUL'   , '  ' , '01-JAN-20' ) ;
+insert into USAGER values ( 23 , 'ROURKE'    , 'MICKEY'      , '  ' , '01-JAN-15' ) ;
+insert into USAGER values ( 24 , 'BASINGER'  , 'KIM'         , '  ' , '01-JAN-19' ) ;
+insert into USAGER values ( 25 , 'DENEUVE'   , 'CATHERINE'   , '  ' , '01-JAN-20' ) ;
+insert into USAGER values ( 26 , 'GABIN'     , 'JEAN'        , '  ' , '01-JAN-20' ) ;
+insert into USAGER values ( 27 , 'DE FUNES'  , 'LOUIS'       , '  ' , '01-JAN-15' ) ;
+insert into USAGER values ( 28 , 'LANGLET'   , 'AMANDA'      , '  ' , '01-JAN-16' ) ;
+insert into USAGER values ( 29 , 'BARR'      , 'JEAN-MARC'   , '  ' , '01-JAN-19' ) ;
+insert into USAGER values ( 30 , 'ARQUETTE'  , 'ROSANNA'     , '  ' , '01-JAN-20' ) ;
+insert into USAGER values ( 31 , 'RENO'      , 'JEAN'        , '  ' , '01-JAN-21' ) ;
+insert into USAGER values ( 32 , 'NEWMAN'    , 'PAUL'        , '  ' , '01-JAN-19' ) ;
+insert into USAGER values ( 33 , 'DALLE'     , 'BEATRICE'    , '  ' , '01-JAN-17' ) ;
+insert into USAGER values ( 34 , 'ANGLADE'   , 'JEAN-HUGUES' , '  ' , '01-JAN-19' ) ;
+insert into USAGER values ( 35 , 'RIVIERE'   , 'MARIE'       , '  ' , '01-JAN-16' ) ;
+insert into USAGER values ( 36 , 'MALLE'     , 'ALAIN'       , '  ' , '01-JAN-17' ) ;
+insert into USAGER values ( 37 , 'DALLE'     , 'HIND'        , '  ' , '01-JAN-15' ) ;
+insert into USAGER values ( 38 , 'SAUTET'    ,'CLAUDE'       , '  ' , '01-OCT-21' ) ;
+insert into USAGER values ( 39 , 'PINOTEAU'  ,'CLAUDE'       , '  ' , '24-NOV-21' ) ;
+insert into USAGER values ( 40 , 'DAVOY'     ,'ERIC'         , '  ' , '07-FEB-19' ) ;
+insert into USAGER values ( 41 , 'ZIDI'      ,'CLAUDE'       , '  ' , '08-SEP-19' ) ;
+insert into USAGER values ( 42 , 'HAMDOUNI'  ,'GHOFRANE'     , '  ' , '05-DEC-21' ) ;
+insert into USAGER values ( 43 , 'ROHMER'    ,'LOUIS'        , '  ' , '22-JAN-20' ) ;
+insert into USAGER values ( 44 , 'TRUFFAUT'  ,'ERIC'         , '  ' , '07-MAY-20' ) ;
+insert into USAGER values ( 45 , 'LYNE'      ,'ADRIAN'       , '  ' ,'13-AUG-19'  ) ;
+insert into USAGER values ( 46 , 'LYNE'      ,'PAUL'         , '  ' ,'21-SEP-18'  ) ;
+insert into USAGER values ( 47 , 'MALLE'     ,'LOUIS'        , '  ' ,'26-DEC-17'  ) ;
+insert into USAGER values ( 48 , 'AUTAN-LARA','LOUIS'        , '  ' ,'05-APR-20'  ) ;      
+insert into USAGER values ( 49 , 'TRUFFAUT'  ,'JEAN'         , '  ' ,'01-JAN-16'  ) ;
+insert into USAGER values ( 50 , 'MALLE'     ,'FRANCOIS'     , '  ' ,'19-OCT-16'  ) ;
+insert into USAGER values ( 51 , 'COCTEAU'   ,'ERIK'         , '  ' ,'13-JAN-21'  ) ;
+insert into USAGER values ( 52 , 'COCTEAU'   ,'LOUIS'        , '  ' ,'02-FEB-15'  ) ;
+insert into USAGER values ( 53 , 'ROHMER'    ,'LOUIS'        , '  ' ,'30-JUN-20'  ) ;
+insert into USAGER values ( 54 , 'TRUFFAUT'  ,'CLAUDE'       , '  ' ,'18-MAR-15'  ) ;
+insert into USAGER values ( 55 , 'PREMINGER' ,'LUC'          , '  ' ,'04-MAY-15'  ) ;
+insert into USAGER values ( 56 , 'PREMINGER' ,'MARIE'        , '  ' ,'28-FEB-20'  ) ;
+insert into USAGER values ( 57 , 'PREMINGER' ,'HIND'         , '  ' ,'17-JUL-16'  ) ;
+insert into USAGER values ( 58 , 'NASDAMI'   ,'QUATADAH'     , '  ' ,'17-SEP-20'  ) ;
+
 
