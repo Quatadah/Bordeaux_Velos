@@ -3,21 +3,15 @@
 --   Nom de SGBD      :  ORACLE Version 7.0                    
 --   Date de creation :  14/11/21  15:32                       
 -- ============================================================
-drop index VELO_PK;
+
 
 drop index VELO_FK1;  
 
 drop table VELO cascade constraints; 
 
---drop index USAGER_PK;
-
 drop table USAGER cascade constraints;
 
---drop index STATION_PK;
-
 drop table STATION cascade constraints;
-
---drop index EMPRUNT_PK;
 
 drop index EMPRUNT_FK1;  
 
@@ -28,8 +22,6 @@ drop index EMPRUNT_FK3;
 drop index EMPRUNT_FK4;
 
 drop table EMPRUNT cascade constraints; 
-
---drop index ETRE_DISTANT_PK;
 
 drop index ETRE_DISTANT_FK1;  
 
