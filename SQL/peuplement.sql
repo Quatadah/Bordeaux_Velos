@@ -1,4 +1,12 @@
---VELO
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+--               BASE DE DONNEES : FLOTTE DE VELOS                     --
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+
+
+-- VELO
+
 insert into VELO values (1,'O2Feel',20000,'01-JAN-16',50,1)
 insert into VELO values (2,'Maa Bikes',300000,'01-JAN-16',60,12)
 insert into VELO values (3,'EXS',40000,'01-JAN-16',70,6)
@@ -131,7 +139,7 @@ insert into VELO values (98,'Maa Bikes',2770,'01-JAN-21',50,7)
 insert into VELO values (99,'Eovolt',48000,'01-JAN-20',50,4)
 insert into VELO values (100,'CyclO2',21850,'01-JAN-20',50,6)   
 
-
+----------------------------------------------------------------------
 
 insert into VELO values (101,'EXS',40000,'01-FAB-17',90,3)
 insert into VELO values (102,'CyclO2',40000,'01-FAB-17',90,4)
@@ -148,7 +156,7 @@ insert into VELO values (112,'Eovolt',87892,'01-FAB-17',65,10)
 insert into VELO values (113,'Eovolt',328246,'01-JAN-19',75,7)
 insert into VELO values (114,'Eovolt',6596472,'01-JAN-19',75,1)
 
---USAGERS
+-- USAGER
 
 
 insert into USAGER values (  1 , 'MONTAND'   , 'YVES'        , '  ' , '13-OCT-21' ) ;
@@ -210,4 +218,17 @@ insert into USAGER values ( 56 , 'PREMINGER' ,'MARIE'        , '  ' ,'28-FEB-20'
 insert into USAGER values ( 57 , 'PREMINGER' ,'HIND'         , '  ' ,'17-JUL-16'  ) ;
 insert into USAGER values ( 58 , 'NASDAMI'   ,'QUATADAH'     , '  ' ,'17-SEP-20'  ) ;
 
+-- STATION
 
+insert into STATION values ( 1 , "Arts et métiers", 10, "Talence" )
+insert into STATION values ( 2 , "Béthanie", 8, "Talence" )
+insert into STATION values ( 3 , "Forum", 10, "Talence" )
+insert into STATION values ( 4 , "Roustaing", 8, "Talence" )
+insert into STATION values ( 5 , "Barrière saint-genès", 8, "Bordeaux" )
+insert into STATION values ( 6 , "Bergnonié", 8, "Bordeaux" )
+insert into STATION values ( 7 , "Saint-Nicolas", 10, "Bordeaux" )
+insert into STATION values ( 8 , "Victoire", 10, "Bordeaux" )
+insert into STATION values ( 9 , "Musée d'aquitaine", 10, "Bordeaux" )
+insert into STATION values ( 10 , "Hôtel de ville", 10, "Bordeaux" )
+insert into STATION values ( 11 , "Gambetta", 10, "Bordeaux" )
+insert into STATION values ( 12 , "Grand théâtre", 10, "Bordeaux" )
