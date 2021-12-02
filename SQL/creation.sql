@@ -38,9 +38,9 @@ drop table ETRE_DISTANT cascade constraints;
 -- ============================================================
 create table VELO
 (
-    NUMERO_REFERENCE                NUMBER(4)              not null,
+    NUMERO_REFERENCE                NUMBER(3)              not null,
     MARQUE                          CHAR(20)                       ,                      
-    KILOMETRAGE                     NUMBER(4)                       ,
+    KILOMETRAGE                     NUMBER(6)                       ,
     DATE_DE_MISE_EN_SERVICE         DATE                           ,
     NIVEAU_CHARGE                   DECIMAL(4)                      ,
     NUMERO_STATION                  NUMBER(4)                        ,
