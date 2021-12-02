@@ -11,18 +11,22 @@
 <body>
     <?php include "header.php"; ?>
     <section>
-        <div class="main">
-            <h1>Créer un nouveau compte </h1>
-            <form class="connexion" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                <label class="form-ele" for="name">Nom</label>
-                <input type=text id="name" name="name">
-                <label class="form-ele" for="firstname">Prénom</label>
-                <input type=text id="firstname" name="firstname">
-                <label class="form-ele" for="address">Adresse</label>
-                <input type="text" id="adress" name="address">
-                <input id="btn" type=submit value="Créer compte">
-            </form>
-        </div>
+            <div class="container">
+                <div id="bicycle-img">
+                    <img id="img" src="./images/bike.jpg" alt="velo">
+                </div>
+                <div class="main">
+                    <div id="form-user-account-creation">
+                        <h1>Créer un nouveau compte </h1>
+                        <form class="connexion" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                            <input placeholder="Nom" class="form-ele" type=text id="name" name="name">
+                            <input placeholder="Prénom" class="form-ele" type=text id="firstname" name="firstname">
+                            <input placeholder="Adresse" class="form-ele" type="text" id="adress" name="address">
+                            <input class="form-ele" id="btn" type=submit value="Créer compte">
+                        </form>
+                    </div>
+                </div>
+            </div>
     </section>
 </body>
 </html>

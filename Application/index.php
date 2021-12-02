@@ -10,20 +10,23 @@
 <body>
     <?php include "header.php"; ?>
     <section>
-        <h2> Bienvenue dans notre site !</h2>
         <?php //include "consult.php"; ?>
-        <div class="main">
-            <div id="form-user">
-                <h1> Se connecter </h1>
-                <form class="connexion" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
-                    <label class="form-ele" for="id">Identifiant :</label>
-                    <input class="form-ele" name="id" type="text">
-                    <input id="btn" class="form-ele" type="submit" value="Se connecter">
-                </form>
+        <div class="container">
+            <div id="bicycle-img">
+                <img id="img" src="./images/bike.jpg" alt="velo">
             </div>
-            <div id="form-user">
-                <h3>Vous êtes un nouvel usager ?</h3>
-                <a id="btn" href="connexion.php">Créer un compte</a>
+            <div class="main">
+                <div id="form-user">
+                    <h1> Se connecter </h1>
+                    <form class="connexion" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
+                        <input class="form-ele" name="id" type="text" placeholder="Identifiant">
+                        <input id="btn" class="form-ele" type="submit" value="Se connecter">
+                    </form> 
+                    <div id="creer-compte">
+                        <p>Vous êtes un nouvel usager ?</p>
+                        <a id="a" href="connexion.php">Créer un compte</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
