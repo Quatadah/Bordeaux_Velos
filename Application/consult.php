@@ -1,21 +1,16 @@
-<html>
-  <head>
-    <title>PHP/Oracle Test</title>
-  </head>
 <?php
     include "connect.php"; /* Le fichier connect_oracle.php contient les identifiants de connexion */
-    $query = oci_parse($conn, 'select * from VELO');
-    oci_execute($query);
-    echo "<table>";
-    while ($row = oci_fetch_array($query, OCI_ASSOC)) {
-      echo "<tr>\n";
-      foreach ($row as $item) {
-        echo "    <td>" . $item. "</td>\n";
+    $sql = "SELECT * from FLOTTE_DE_VELOS.VELO";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+      // output data of each row
+      while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["NUMERO_REFERENCE"]. " - Marque: " . $row["MARQUE"]. " -Kilometrage " . $row["KILOMETRAGE"]. " date de mise en service " . $row["DATE_DE_MISE_EN_SERVICE"] . " niveau de charge " . $row["NIVEAU_CHARGE"]. " numero de station " .$row["NUMERO_STATION"]  ."<br>";
       }
-      echo "</tr>\n";
+    } else {
+      echo "0 results";
     }
-    echo "</table>\n";
-    oci_free_statement($query);
-    oci_close($conn);
+    $conn->close();
+    
 ?>
-</html>

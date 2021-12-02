@@ -1,19 +1,15 @@
 <?php
-    $login = "username";
-    $password = "********";
-    $servername = "oracle/oracle";
+    $login = "root";
+    $password = "";
+    $servername = "localhost";
 
     //create connetion
-    $conn = oci_connect($login, $password, $servername);
+    $conn = new mysqli($servername, $login, $password);
 
     //check connection
-    if (!$conn){
-        $m = oci_error();
-        print $m['message'];
-        exit;
-    } else {
-        print "Connected to Oracle";
+    if ($conn->connect_error) {
+        die("Connection failed :" . $conn->connect_error);
     }
-
-    oci_close($conn);
+    echo "Connected successfully";
+    
 ?>

@@ -4,46 +4,19 @@
 --   Date de creation :  14/11/21  15:32                       
 -- ============================================================
 
-
-drop index VELO_FK1;  
-
-drop table VELO cascade constraints; 
-
-drop table USAGER cascade constraints;
-
-drop table STATION cascade constraints;
-
-drop index EMPRUNT_FK1;  
-
-drop index EMPRUNT_FK2;
-
-drop index EMPRUNT_FK3;  
-
-drop index EMPRUNT_FK4;
-
-drop table EMPRUNT cascade constraints; 
-
-drop index ETRE_DISTANT_FK1;  
-
-drop index ETRE_DISTANT_FK2;
-
-drop table ETRE_DISTANT cascade constraints; 
-
-
-
-
-
+create database FLOTTE_DE_VELOS;
+use FLOTTE_DE_VELOS;
 -- ============================================================
 --   Table : VELO                                            
 -- ============================================================
 create table VELO
 (
-    NUMERO_REFERENCE                NUMBER(3)              not null,
+    NUMERO_REFERENCE                INT(3)              not null,
     MARQUE                          CHAR(20)                       ,                      
-    KILOMETRAGE                     NUMBER(6)                       ,
+    KILOMETRAGE                     INT(6)                       ,
     DATE_DE_MISE_EN_SERVICE         DATE                           ,
     NIVEAU_CHARGE                   DECIMAL(4)                      ,
-    NUMERO_STATION                  NUMBER(4)                        ,
+    NUMERO_STATION                  INT(4)                        ,
     constraint pk_velo primary key (NUMERO_REFERENCE)
 ); 
 
@@ -59,7 +32,7 @@ create index VELO_FK1 on VELO (NUMERO_STATION asc);
 -- ============================================================
 create table USAGER
 (
-    NUMERO_USAGER                   NUMBER(4)              not null,
+    NUMERO_USAGER                   INT(4)              not null,
     NOM_USAGER                      CHAR(20)               not null,
     PRENOM_USAGER                   CHAR(20)                       ,
     ADRESSE_USAGER                  CHAR(20)                       ,
@@ -72,9 +45,9 @@ create table USAGER
 -- ============================================================
 create table STATION
 (
-    NUMERO_STATION                   NUMBER(4)              not null,
+    NUMERO_STATION                   INT(4)              not null,
     ADRESSE_STATION                  CHAR(20)                       ,
-    NOMBRE_BORNES                    NUMBER(4)                      ,
+    NOMBRE_BORNES                    INT(4)                      ,
     COMMUNE                          CHAR(20)                       ,
     constraint pk_station primary key (NUMERO_STATION)
 ); 
@@ -85,13 +58,13 @@ create table STATION
 -- ============================================================
 create table EMPRUNT
 (
-    NUMERO_EMPRUNT                  NUMBER(3)              not null,
+    NUMERO_EMPRUNT                  INT(3)              not null,
     DATE_DEPART               DATE                           ,
     DATE_RETOUR               DATE                           ,
-    NUMERO_USAGER             NUMBER(4)                      not null,
-    NUMERO_REFERENCE          NUMBER(4)                      not null,
-    NUMERO_STATION_DEPART            NUMBER(4)               not null,
-    NUMERO_STATION_ARRIVEE            NUMBER(4)              ,
+    NUMERO_USAGER             INT(4)                      not null,
+    NUMERO_REFERENCE          INT(4)                      not null,
+    NUMERO_STATION_DEPART            INT(4)               not null,
+    NUMERO_STATION_ARRIVEE            INT(4)              ,
     constraint pk_emprunt primary key (NUMERO_EMPRUNT)
 ); 
 
@@ -122,8 +95,8 @@ create index EMPRUNT_FK4 on EMPRUNT (NUMERO_STATION_ARRIVEE asc);
 
 create table ETRE_DISTANT
 (
-    NUMERO_STATION_DEPART            NUMBER(4)               not null,
-    NUMERO_STATION_ARRIVEE            NUMBER(4)              not null, 
+    NUMERO_STATION_DEPART            INT(4)               not null,
+    NUMERO_STATION_ARRIVEE            INT(4)              not null, 
     DISTANCE                          DECIMAL(4)                                      ,
     constraint pk_etre_distant primary key (NUMERO_STATION_DEPART, NUMERO_STATION_ARRIVEE)
 );

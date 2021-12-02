@@ -1,8 +1,3 @@
--------------------------------------------------------------------------
--------------------------------------------------------------------------
---               BASE DE DONNEES : FLOTTE DE VELOS                     --
--------------------------------------------------------------------------
--------------------------------------------------------------------------
 
 -- STATION
 
@@ -32,7 +27,7 @@ insert into VELO values ( 7,  'O2Feel',  20000,  '01-JAN-16',  50,  6 );
 insert into VELO values ( 8,  'O2Feel',  8000,  '01-FEB-17',  50,  1 );
 insert into VELO values ( 9,  'O2Feel',  12000,  '01-JAN-18',  50,  1 );
 insert into VELO values ( 10,  'CyclO2',  9000,  '01-JAN-18',  50,  1 );
---------------------------------------------------------------
+
 insert into VELO values ( 11,  'O2Feel',  80000,  '01-JAN-18',  50,  2 );
 insert into VELO values ( 12,  'O2Feel',  60000,  '01-JAN-18',  80,  2 );
 insert into VELO values ( 13,  'O2Feel',  63000,  '01-JAN-16',  40,  2 );
@@ -44,7 +39,7 @@ insert into VELO values ( 18,  'CyclO2',  100000,  '01-JAN-19',  50,  3 );
 insert into VELO values ( 19,  'Eovolt',  80000,  '01-JAN-19',  75,  1 );
 insert into VELO values ( 20,  'Eovolt',  40000,  '01-JAN-16',  75,  5 );
 
--------------------------------------------------------------- 
+
 insert into VELO values ( 21,  'O2Feel',  200000,  '01-FEB-17',  50,  3 );
 insert into VELO values ( 22,  'Eovolt',  25000,  '01-FEB-17',  80,  3 );
 insert into VELO values ( 23,  'Eovolt',  70000,  '01-JAN-16',  40,  5 );
@@ -57,7 +52,7 @@ insert into VELO values ( 29,  'Eovolt',  789450,  '01-JAN-16',  75,  5 );
 insert into VELO values ( 30,  'Eovolt',  14466,  '01-JAN-18',  75,  3 );
 insert into VELO values ( 31,  'Eovolt',  145480,  '01-JAN-16',  65,  4 );  
 
----------------------------------------------------------- 
+
 
 insert into VELO values ( 32,  'Maa Bikes',  30569,  '01-JAN-16',  60,  7 );
 insert into VELO values ( 33,  'EXS',  401254,  '01-JAN-16',  70,  6 );
@@ -70,7 +65,7 @@ insert into VELO values ( 39,  'O2Feel',  20846,  '01-JAN-20',  50,  1 );
 insert into VELO values ( 40,  'CyclO2',  2045,  '01-JAN-21',  50,  7 );
 
 
------------------------------------------------------------------ 
+
 
 
 insert into VELO values ( 41,  'Eovolt',  245050,  '01-JAN-16',  50,  7 );
@@ -86,7 +81,7 @@ insert into VELO values ( 50,  'Eovolt',  215680,  '01-JAN-16',  75,  8 );
 insert into VELO values ( 51,  'Eovolt',  248720,  '01-JAN-16',  65,  10 ); 
 
 
-----------------------------------------------------------
+
 insert into VELO values ( 52,  'O2Feel',  24675,  '01-JAN-19',  80,  2 );
 insert into VELO values ( 53,   'O2Feel',   149710,   '01-JAN-18',   40,   9 );
 insert into VELO values ( 54,  'O2Feel',  459720,  '01-JAN-16',  50,  9 );
@@ -100,7 +95,7 @@ insert into VELO values ( 61, 'Eovolt', 201, '01-JAN-21', 65, 10 );
 
 
 
------------------------------------------------------------- 
+
 
 
 insert into VELO values ( 62, 'Maa Bikes', 300000, '01-JAN-16', 60, 11 );
@@ -113,7 +108,7 @@ insert into VELO values ( 68, 'Eovolt', 78942, '01-JAN-19', 50, 10 );
 insert into VELO values ( 69, 'Eovolt', 89420, '01-FEB-01', 50, 11 );
 insert into VELO values ( 70, 'CyclO2', 87452, '01-FEB-01', 50, 12 );
 
---------------------------------------------------------------------
+
 
 
 
@@ -127,7 +122,7 @@ insert into VELO values ( 78, 'Eovolt', 212450, '01-JAN-18', 50, 8 );
 insert into VELO values ( 79, 'Eovolt', 27840, '01-JAN-18', 50, 8 );
 insert into VELO values ( 80, 'CyclO2', 258770, '01-JAN-18', 50, 7 );  
 
--------------------------------------------------------------
+
 
 
 insert into VELO values ( 82, 'O2Feel', 20, '01-JAN-21', 80, 2 );
@@ -141,7 +136,7 @@ insert into VELO values ( 89, 'Eovolt', 790, '01-JAN-21', 75, 10 );
 insert into VELO values ( 90, 'Eovolt', 200, '01-JAN-21', 75, 7 );
 insert into VELO values ( 91, 'Eovolt', 8, '01-JAN-21', 65, 8 );
 
----------------------------------------------------------------------- 
+
 
 
 insert into VELO values ( 92, 'Maa Bikes', 18030, '01-JAN-20', 60, 10 );
@@ -154,7 +149,7 @@ insert into VELO values ( 98, 'Maa Bikes', 2770, '01-JAN-21', 50, 7 );
 insert into VELO values ( 99, 'Eovolt', 48000, '01-JAN-20', 50, 4 );
 insert into VELO values ( 100, 'CyclO2', 21850, '01-JAN-20', 50, 6 );   
 
-----------------------------------------------------------------------
+
 
 insert into VELO values ( 101, 'EXS', 40000, '01-FEB-17', 90, 3 );
 insert into VELO values ( 102, 'CyclO2', 40000, '01-FEB-17', 90, 4 );
@@ -238,9 +233,6 @@ insert into USAGER values ( 58 ,  'NASDAMI'   , 'QUATADAH'     ,  '  ' , '17-SEP
 
 
 
-
-
-
 -----------------------------------------------------------------------------------------------
                               --Trigger
 -----------------------------------------------------------------------------------------------
@@ -254,3 +246,4 @@ declare
         RAISE_APPLICATION_ERROR(-20000,  'nombre de bornes dépassé!')
     end if;
 end;
+
