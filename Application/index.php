@@ -10,17 +10,17 @@
 <body>
     <?php include "header.php"; ?>
     <section>
-        <?php //include "consult.php"; ?>
+        <?php include "consult.php"; ?>
         <div class="container">
             <div id="bicycle-img">
                 <img id="img" src="./images/bike.jpg" alt="velo">
             </div>
-            <div class="main">
+            <div class  ="main">
                 <div id="form-user">
                     <h1> Se connecter </h1>
                     <form class="connexion" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
                         <input class="form-ele" name="id" type="text" placeholder="Identifiant">
-                        <input id="btn" class="form-ele" type="submit" value="Se connecter">
+                        <a href="index.php"><input id="btn" class="form-ele" type="submit" value="Se connecter"></a>
                     </form> 
                     <div id="creer-compte">
                         <p>Vous êtes un nouvel usager ?</p>

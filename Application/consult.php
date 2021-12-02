@@ -1,8 +1,16 @@
 
 
 <?php
-    include "connect.php"; /* Le fichier connect_oracle.php contient les identifiants de connexion */
-    $sql = "SELECT * from FLOTTE_DE_VELOS.USAGER";
+    $lastname = 'NOM';
+    $firstname = 'PRENOM';
+    $address = 'ADRESSE';
+    include "connect.php"; 
+    $date = Date('Y-m-d');
+
+        
+    $sql = "SELECT * from FLOTTE_DE_VELOS.USAGER 
+    where NOM_USAGER = '$lastname' and PRENOM_USAGER = '$firstname' 
+    and ADRESSE_USAGER = '$address'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {

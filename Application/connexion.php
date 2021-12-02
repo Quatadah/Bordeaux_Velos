@@ -10,6 +10,7 @@
 </head>
 <body>
     <?php include "header.php"; ?>
+    
     <section>
             <div class="container">
                 <div id="bicycle-img">
@@ -18,11 +19,16 @@
                 <div class="main">
                     <div id="form-user-account-creation">
                         <h1>Créer un nouveau compte </h1>
+                        <?php include "scripts/create.php"; ?>
                         <form class="connexion" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                             <input placeholder="Nom" class="form-ele" type=text id="name" name="name">
+                            <span class="error"><?php echo $lastnameErr ?></span>
                             <input placeholder="Prénom" class="form-ele" type=text id="firstname" name="firstname">
-                            <input placeholder="Adresse" class="form-ele" type="text" id="adress" name="address">
+                            <span class="error"><?php echo $firstnameErr ?></span>
+                            <input placeholder="Adresse" class="form-ele" type="text" id="address" name="address">
+                            <span class="error"><?php echo $addressErr ?></span>
                             <input class="form-ele" id="btn" type=submit value="Créer compte">
+                            <?php echo $added . "<br>" ?>
                         </form>
                     </div>
                 </div>
