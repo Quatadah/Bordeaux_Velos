@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,9 +9,10 @@
     <title>Flotte de vélos</title>
 </head>
 <body>
-    <?php include "header.php"; ?>
+    <?php include_once "header.php"; ?>
     <section>
-        <?php include "consult.php"; ?>
+        <?php //include_once "consult.php"; ?>
+        <?php include_once "scripts/identifier.php" ?>
         <div class="container">
             <div id="bicycle-img">
                 <img id="img" src="./images/bike.jpg" alt="velo">
@@ -18,10 +20,13 @@
             <div class  ="main">
                 <div id="form-user">
                     <h1> Se connecter </h1>
-                    <form class="connexion" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
+                    <form class="connexion" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>">
                         <input class="form-ele" name="id" type="text" placeholder="Identifiant">
+                        <span class="error"> <?php echo $identifierErr ?></span>
                         <a href="index.php"><input id="btn" class="form-ele" type="submit" value="Se connecter"></a>
+                        <?php echo $existOrNot; ?>
                     </form> 
+                    
                     <div id="creer-compte">
                         <p>Vous êtes un nouvel usager ?</p>
                         <a id="a" href="connexion.php">Créer un compte</a>

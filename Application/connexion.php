@@ -9,7 +9,7 @@
     <title>Connexion</title>
 </head>
 <body>
-    <?php include "header.php"; ?>
+    <?php include_once "header.php"; ?>
     
     <section>
             <div class="container">
@@ -19,7 +19,7 @@
                 <div class="main">
                     <div id="form-user-account-creation">
                         <h1>Créer un nouveau compte </h1>
-                        <?php include "scripts/create.php"; ?>
+                        <?php include_once "scripts/create.php"; ?>
                         <form class="connexion" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
                             <input placeholder="Nom" class="form-ele" type=text id="name" name="name">
                             <span class="error"><?php echo $lastnameErr ?></span>

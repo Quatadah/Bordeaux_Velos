@@ -139,3 +139,6 @@ section{
 #a:hover{
     transform: scale(102%);
 }
+.error{
+    color: red;
+}
