@@ -230,6 +230,35 @@ insert into USAGER values ( 58 ,  'NASDAMI'   , 'QUATADAH'     ,  '  ' , '17-SEP
 
 
 
+--EMPRUNT 
+
+
+
+insert into EMPRUNT values ( 1, '2021-11-01 08:30:00', '2021-11-11 18:24:56', 10, 112, 5, 8 );
+insert into EMPRUNT values ( 2, '2021-08-19 10:45:23', '2021-09-14 16:15:51', 2, 102, 7, 2 );
+insert into EMPRUNT values ( 3, '2021-10-01 15:46:08', '2021-10-31 22:06:03', 1, 42, 1, 1 );
+insert into EMPRUNT values ( 4, '2021-11-24 10:36:02', '2021-11-26 14:24:56', 24, 22, 11, 8 );
+insert into EMPRUNT values ( 5, '2021-12-01 20:46:03', '2021-12-01 23:49:32', 6, 96, 10, 2 );
+insert into EMPRUNT values ( 6, '2021-10-24 13:02:00', '2021-11-06 12:49:03', 24, 22, 11, 8 );
+insert into EMPRUNT values ( 7, '2021-11-24 07:12:03', '2021-11-26 12:46:32', 52, 82, 2, 1 );
+insert into EMPRUNT values ( 8, '2021-11-24 12:12:06', '2021-11-26 05:06:32', 45, 107, 2, 9 );
+insert into EMPRUNT values ( 9, '2021-11-12 07:12:03', '2021-11-12 12:08:32', 20, 46, 7, 7 );
+insert into EMPRUNT values ( 10, '2021-11-30 09:12:03', '2021-12-01 18:28:52', 28, 28, 10, 10 );
+insert into EMPRUNT values ( 11, '2021-11-28 08:30:00', '2021-11-28 18:24:56', 3, 102, 8, 8 );
+insert into EMPRUNT values ( 12, '2021-10-12 10:45:23', '2021-10-31 16:15:51', 8, 12, 3, 2 );
+insert into EMPRUNT values ( 13, '2021-10-12 15:46:08', '2021-10-31 22:06:03', 6, 18, 10, 9 );
+insert into EMPRUNT values ( 14, '2021-10-12 10:36:02', null, 4, 18, 11, 8 );
+insert into EMPRUNT values ( 15, '2021-12-01 20:48:03', '2021-12-01 23:49:32', 6, 96, 10, 2 );
+insert into EMPRUNT values ( 16, '2021-11-24 13:02:00', null, 24, 22, 11, 8 );
+insert into EMPRUNT values ( 17, '2021-11-13 07:12:03', null, 56, 92, 2, 1 );
+insert into EMPRUNT values ( 18, '2021-11-13 12:12:06', '2021-11-28 15:06:32', 7, 107, 2, 9 );
+insert into EMPRUNT values ( 19, '2021-11-12 07:12:03', '2021-11-12 12:08:32', 5, 46, 7, 6 );
+insert into EMPRUNT values ( 20, '2021-11-30 09:12:03', '2021-12-01 19:28:52', 11, 28, 10, 1 );
+
+
+
+
+
 
 
 
@@ -238,12 +267,42 @@ insert into USAGER values ( 58 ,  'NASDAMI'   , 'QUATADAH'     ,  '  ' , '17-SEP
 -----------------------------------------------------------------------------------------------
 
 create or replace trigger NOMBRE_BORNES
-after insert on VELO for each row 
+before insert on VELO for each row 
 declare
     nb NUMBER;
+    lim NUMBER;
     select count(*) into nb from VELO where NUMERO_STATION=:NEW.NUMERO_STATION;
-    if STATION.NUMERO_STATION and nb > STATION.NOMBRE_BORNES then 
+    select NOMBRE_BORNES into lim from STATION where NUMERO_STATION=:NEW.NUMERO_STATION;
+    if nb >= lim then 
         RAISE_APPLICATION_ERROR(-20000,  'nombre de bornes dépassé!')
     end if;
-end;
+end; 
+/
+
+
+
+create or replace trigger TAKE_VELO
+after insert into EMPRUNT
+for each row 
+when (new.DATE_RETOUR is null) 
+begin 
+    update VELO
+    set VELO.NUMERO_STATION=null
+    where (VELO.NUMERO_REFERENCE=new.NUMERO_REFERENCE) ;
+end; 
+/
+
+
+
+create or replace trigger RETURN_VELO
+after update EMPRUNT
+for each row 
+when (new.DATE_RETOUR is not null) 
+begin 
+    update VELO
+    set VELO.NUMERO_STATION=new.NUMERO_STATION_ARRIVEE
+    where (VELO.NUMERO_REFERENCE=new.NUMERO_REFERENCE) ;
+end; 
+/
+
 
