@@ -59,8 +59,8 @@ create table STATION
 create table EMPRUNT
 (
     NUMERO_EMPRUNT                  INT(3)              not null,
-    DATE_DEPART               DATE                           ,
-    DATE_RETOUR               DATE                           ,
+    DATE_DEPART               DATETIME                          ,
+    DATE_RETOUR               DATETIME                           ,
     NUMERO_USAGER             INT(4)                      not null,
     NUMERO_REFERENCE          INT(4)                      not null,
     NUMERO_STATION_DEPART            INT(4)               not null,
