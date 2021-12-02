@@ -251,6 +251,6 @@ declare
     nb NUMBER;
     select count(*) into nb from VELO where NUMERO_STATION=:NEW.NUMERO_STATION;
     if STATION.NUMERO_STATION and nb > STATION.NOMBRE_BORNES then 
-        RAISE_APPLICATION_ERROR(-1,  'nombre de bornes dépassé!')
+        RAISE_APPLICATION_ERROR(-20000,  'nombre de bornes dépassé!')
     end if;
 end;
