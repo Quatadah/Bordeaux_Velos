@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/app.css"> 
-    <title>Flotte de vélos</title>
+    <title>About</title>
 </head>
 <body>
     <?php include "header.php"; ?>
-    <h2> Exemple de requete </h2>
-    <?php include "consult.php"; ?>
+    This project is done by : <br>
+    Nasdami Quatadah - Ghofrane Hamdouni - Doha Sadiq
 </body>
 </html>
