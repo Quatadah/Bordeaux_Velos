@@ -9,7 +9,23 @@
 </head>
 <body>
     <?php include "header.php"; ?>
-    <h2> Exemple de requete </h2>
-    <?php include "consult.php"; ?>
+    <section>
+        <h2> Bienvenue dans notre site !</h2>
+        <?php //include "consult.php"; ?>
+        <div class="main">
+            <div id="form-user">
+                <h1> Se connecter </h1>
+                <form class="connexion" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
+                    <label class="form-ele" for="id">Identifiant :</label>
+                    <input class="form-ele" name="id" type="text">
+                    <input id="btn" class="form-ele" type="submit" value="Se connecter">
+                </form>
+            </div>
+            <div id="form-user">
+                <h3>Vous êtes un nouvel usager ?</h3>
+                <a id="btn" href="connexion.php">Créer un compte</a>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

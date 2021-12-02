@@ -1,14 +1,16 @@
 body{
-    background-color: lightcoral;
-    color: whitesmoke;
+    background-color: white;
+    color: darkslategray;
     font-family: 'Courier New', Courier, monospace;
 }
 
 header{
+    height: 50px;
+    background-color: lightcoral;
     padding: 10px;
     display: flex;
-    justify-content: space-evenly;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navlist{
@@ -23,10 +25,11 @@ header{
 }
 
 #line{
+    margin: 0;
     color: darkcyan;
 }
 
-a{
+.nav-ele a{
     text-decoration: none;
     color: whitesmoke;
 }
@@ -34,4 +37,54 @@ a{
 .nav-ele a:hover{
     font-weight:  bold;
     border-bottom: 1px solid darkcyan;
+}
+
+td, th{
+    border: 2px solid black;
+}
+table{
+    width: 70%;
+    border-collapse: collapse;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.connexion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-ele{
+    margin: 10px 0 10px 0;
+}
+#form-user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn{
+    margin-top: 10px;
+    color: whitesmoke;
+    padding: 3px;
+    text-decoration: none;
+    border: 1px solid darkcyan;
+    border-radius: 5px;
+    background-color: darkcyan;
+}
+
+#btn:hover{
+    cursor: pointer;
+}
+
+.main{
+    margin-top: 100px;
+    border: 1px solid darkcyan;
+    border-radius: 5px;
+    padding: 20px;
 }
