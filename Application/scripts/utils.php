@@ -23,4 +23,12 @@ function getId() : int{
     $result = $conn->query($sql);
     return $result->fetch_assoc()["NUMERO_USAGER"];
 }
+
+function getFullNameById($conn, $id) : string{
+    $sql = "SELECT * from FLOTTE_DE_VELOS.USAGER
+            where NUMERO_USAGER = '$id';";
+    $result = $conn->query($sql);
+    $data = $result->fetch_assoc();
+    return $data["NOM_USAGER"] . " " . $data["PRENOM_USAGER"];
+}
 ?>

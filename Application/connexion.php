@@ -30,6 +30,7 @@
                             <input class="form-ele" id="btn" type=submit value="Créer compte">
                             <?php echo $added . "<br>" ?>
                         </form>
+                        <a id="se-connecter" href="index.php">Se connecter</a>
                     </div>
                 </div>
             </div>

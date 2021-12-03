@@ -5,6 +5,11 @@ body{
     font-weight: bold;
 }
 
+#name-title a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
 header{
     height: 50px;
     padding: 10px;
@@ -35,8 +40,11 @@ header{
 }
 
 .nav-ele a:hover{
-    font-weight:  bold;
     border-bottom: 1px solid darkcyan;
+    padding: 3px
+}
+.nav-ele:hover{
+    transform: scale(110%);
 }
 
 td, th{
@@ -142,3 +150,4 @@ section{
 .error{
     color: red;
 }
+

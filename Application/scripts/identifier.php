@@ -32,10 +32,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $identifierErr = "Le champ identifiant est requis pour se connecter";
     }else {
         if (checkExistence($identifier)){
+            $_SESSION["USER_FULLNAME"] = getFullNameById($conn, $identifier);
+            $_SESSION["LOGGED_USER"] = $identifier;
             sleep(1);
             $host  = $_SERVER['HTTP_HOST'];
             $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-            $extra = 'home.php';
+            $extra = 'index.php';
             header("Location: http://$host$uri/$extra");
             exit;   
         } else {
@@ -44,6 +46,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     
 }
-
+$conn->close();
 
 ?>

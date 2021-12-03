@@ -1,3 +1,4 @@
+<?php if(!isset($_SESSION["LOGGED_USER"])) session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +12,9 @@
 <body>
     <?php include_once "header.php" ?>
     <section>
+        <h1>
+            <?php echo "Bienvenue ". $_SESSION["USER_FULLNAME"] ?>
+        </h1>
         <div class="search-title">
             <img id="search-img" src="images/search.png" alt="logo">
             <h1>Rechercher</h1>

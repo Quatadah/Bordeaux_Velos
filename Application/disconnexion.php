@@ -1,4 +1,6 @@
-<?php session_start() ?>
+<?php session_start(); 
+    $_SESSION = array(); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +33,7 @@
                         </form> 
 
                         <div id="creer-compte">
-                            <p>Vous êtes un nouvel utilisateur ?</p>
+                            <p>Vous êtes un nouvel usager ?</p>
                             <a id="a" href="connexion.php">Créer un compte</a>
                         </div>
                     </div>
