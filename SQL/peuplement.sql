@@ -251,7 +251,8 @@ insert into EMPRUNT values ( 16, '2021-12-02 13:02:00', null, 24, 22, 11, 8 );
 insert into EMPRUNT values ( 17, '2021-12-02 07:12:03', null, 56, 92, 2, 1 );
 insert into EMPRUNT values ( 18, '2021-11-13 12:12:06', '2021-11-28 15:06:32', 7, 107, 2, 9 );
 insert into EMPRUNT values ( 19, '2021-11-12 07:12:03', '2021-11-12 12:08:32', 5, 46, 7, 6 );
-insert into EMPRUNT values ( 20, '2021-11-30 09:12:03', '2021-12-01 19:28:52', 11, 28, 10, 1 );
+insert into EMPRUNT values ( 20, '2021-11-30 09:12:03', '2021-11-30 19:28:52', 11, 28, 10, 1 );
+insert into EMPRUNT values ( 21, '2021-11-30 20:12:03', '2021-11-30 22:28:52', 11, 29, 11, 12 );
 
 --ETRE_DISTANT
 
@@ -411,52 +412,5 @@ insert into ETRE_DISTANT values (12,10,2);
 insert into ETRE_DISTANT values (12,11,1);
 insert into ETRE_DISTANT values (12,12,0);
 
-
-
-
-
-
------------------------------------------------------------------------------------------------
-                              --Trigger
------------------------------------------------------------------------------------------------
-
-create or replace trigger NOMBRE_BORNES
-before insert on VELO for each row 
-declare
-    nb NUMBER;
-    lim NUMBER;
-    select count(*) into nb from VELO where NUMERO_STATION=:NEW.NUMERO_STATION;
-    select NOMBRE_BORNES into lim from STATION where NUMERO_STATION=:NEW.NUMERO_STATION;
-    if nb >= lim then 
-        RAISE_APPLICATION_ERROR(-20000,  'nombre de bornes dépassé!')
-    end if;
-end; 
-/
-
-
-
-create or replace trigger TAKE_VELO
-after insert into EMPRUNT
-for each row 
-when (new.DATE_RETOUR is null) 
-begin 
-    update VELO
-    set VELO.NUMERO_STATION=null
-    where (VELO.NUMERO_REFERENCE=new.NUMERO_REFERENCE) ;
-end; 
-/
-
-
-
-create or replace trigger RETURN_VELO
-after update EMPRUNT
-for each row 
-when (new.DATE_RETOUR is not null) 
-begin 
-    update VELO
-    set VELO.NUMERO_STATION=new.NUMERO_STATION_ARRIVEE
-    where (VELO.NUMERO_REFERENCE=new.NUMERO_REFERENCE) ;
-end; 
-/
 
 
