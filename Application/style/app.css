@@ -1,12 +1,17 @@
 body{
-    background-color: white;
-    color: darkslategray;
+    background-image: url("../images/background.jpg");
+    color: whitesmoke;
     font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+#name-title a{
+    text-decoration: none;
+    color: whitesmoke;
 }
 
 header{
     height: 50px;
-    background-color: lightcoral;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -26,7 +31,7 @@ header{
 
 #line{
     margin: 0;
-    color: darkcyan;
+    color: darkslategrey;
 }
 
 .nav-ele a{
@@ -35,8 +40,11 @@ header{
 }
 
 .nav-ele a:hover{
-    font-weight:  bold;
     border-bottom: 1px solid darkcyan;
+    padding: 3px
+}
+.nav-ele:hover{
+    transform: scale(110%);
 }
 
 td, th{
@@ -47,6 +55,8 @@ table{
     border-collapse: collapse;
 }
 section{
+    margin-top: 100px;
+    color: whitesmoke;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,32 +69,85 @@ section{
     align-items: center;
 }
 .form-ele{
+    padding : 4px;
+    padding-left: 10px;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    border: 1px solid #eee;
     margin: 10px 0 10px 0;
+    width: 300px;
+    height: 35px;
+    border-radius: 15px;
+    background-color: lightgrey;
 }
 #form-user{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#btn{
+    margin-top: 10px;
+    color: white;
+    padding: 3px;
+    text-decoration: none;
+    border: 1px solid darkcyan;
+    border-radius: 15px;
+    background-color: darkcyan;
+}
+
+#btn:hover{
+    cursor: pointer;
+    background-color: darkslategrey;
+}
+
+.container{
+    height: 500px;
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: darkslategrey;
+    background-color: white;
+    margin-top: auto;
+    border-radius: 20px;
+    /*padding: 100px 60px;*/
+}
+
+
+#img{
+    border: 5px solid darkslategrey;
+    border-radius: 100%;
+    height: auto;
+    width: auto;
+    max-height: 300px;
+    max-width: 350px;
+}
+
+#img:hover{
+    cursor: pointer;
+    transform: scale(102%);
+}
+
+#creer-compte{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#btn{
-    margin-top: 10px;
-    color: whitesmoke;
-    padding: 3px;
+#a{
     text-decoration: none;
-    border: 1px solid darkcyan;
-    border-radius: 5px;
-    background-color: darkcyan;
+    font-size: small;
+    color: darkslategray;
 }
 
-#btn:hover{
-    cursor: pointer;
+#a:hover{
+    transform: scale(102%);
+}
+.error{
+    color: red;
 }
 
-.main{
-    margin-top: 100px;
-    border: 1px solid darkcyan;
-    border-radius: 5px;
-    padding: 20px;
-}

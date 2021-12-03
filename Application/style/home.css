@@ -1,0 +1,35 @@
+.container2{
+    height: 250px;
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: darkslategrey;
+    background-color: white;
+    margin-top: -15px;
+    border-radius: 20px;
+}
+
+#search-img{
+    width: 30px;
+    height: 30px;
+}
+
+.search-title{
+    width: 800px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#input{
+    width: 400px;
+    margin-right: -30px;
+}
+
+
+#input_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

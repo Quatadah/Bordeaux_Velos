@@ -11,7 +11,7 @@ use FLOTTE_DE_VELOS;
 -- ============================================================
 create table VELO
 (
-    NUMERO_REFERENCE                INT(3)              not null,
+    NUMERO_REFERENCE                INT(3)              not null AUTO_INCREMENT,
     MARQUE                          CHAR(20)                       ,                      
     KILOMETRAGE                     INT(6)                       ,
     DATE_DE_MISE_EN_SERVICE         DATE                           ,
@@ -32,7 +32,7 @@ create index VELO_FK1 on VELO (NUMERO_STATION asc);
 -- ============================================================
 create table USAGER
 (
-    NUMERO_USAGER                   INT(4)              not null,
+    NUMERO_USAGER                   INT(4)              not null AUTO_INCREMENT,
     NOM_USAGER                      CHAR(20)               not null,
     PRENOM_USAGER                   CHAR(20)                       ,
     ADRESSE_USAGER                  CHAR(20)                       ,
@@ -45,7 +45,7 @@ create table USAGER
 -- ============================================================
 create table STATION
 (
-    NUMERO_STATION                   INT(4)              not null,
+    NUMERO_STATION                   INT(4)              not null AUTO_INCREMENT,
     ADRESSE_STATION                  CHAR(20)                       ,
     NOMBRE_BORNES                    INT(4)                      ,
     COMMUNE                          CHAR(20)                       ,
@@ -58,7 +58,7 @@ create table STATION
 -- ============================================================
 create table EMPRUNT
 (
-    NUMERO_EMPRUNT                  INT(3)              not null,
+    NUMERO_EMPRUNT                  INT(3)              not null AUTO_INCREMENT,
     DATE_DEPART               DATETIME                          ,
     DATE_RETOUR               DATETIME                           ,
     NUMERO_USAGER             INT(4)                      not null,

@@ -17,6 +17,7 @@ insert into STATION values ( 12 ,  'Grand théâtre',  10,  'Bordeaux' );
 
 -- VELO
 
+
 insert into VELO values ( 1,  'O2Feel'   ,  20000 ,  '2016-02-01',  50 ,  1  );
 insert into VELO values ( 2,  'Maa Bikes',  300000,  '2016-02-01',  60 ,  12 );
 insert into VELO values ( 3,  'EXS'      ,  40000 ,  '2016-02-01',  70 ,  6  );
@@ -166,6 +167,7 @@ insert into VELO values ( 112, 'Eovolt', 87892    , '2017-01-09', 65, 10 );
 insert into VELO values ( 113, 'Eovolt', 328246   , '2017-01-09', 75, 7 );
 insert into VELO values ( 114, 'Eovolt', 65972    , '2017-01-09', 75, 1 );
 
+
 -- USAGER
 
 
@@ -228,7 +230,7 @@ insert into USAGER values ( 56 ,  'PREMINGER' , 'MARIE'        ,  '  ' , '2020-0
 insert into USAGER values ( 57 ,  'PREMINGER' , 'HIND'         ,  '  ' , '2016-01-01'  ) ;
 insert into USAGER values ( 58 ,  'NASDAMI'   , 'QUATADAH'     ,  '  ' , '2020-01-01'  ) ;
 
-
+*/
 
 --EMPRUNT 
 
@@ -255,6 +257,8 @@ insert into EMPRUNT values ( 20, '2021-11-30 09:12:03', '2021-11-30 19:28:52', 1
 insert into EMPRUNT values ( 21, '2021-11-30 20:12:03', '2021-11-30 22:28:52', 11, 29, 11, 12 );
 
 --ETRE_DISTANT
+
+
 
 insert into ETRE_DISTANT values (1,1,0);
 insert into ETRE_DISTANT values (1,2,1);
@@ -411,6 +415,7 @@ insert into ETRE_DISTANT values (12,9,3);
 insert into ETRE_DISTANT values (12,10,2);
 insert into ETRE_DISTANT values (12,11,1);
 insert into ETRE_DISTANT values (12,12,0);
+
 
 
 
