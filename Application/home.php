@@ -20,12 +20,15 @@
             <h1>Rechercher</h1>
         </div>
         <div class="container2">
+        <?php include_once "scripts/searcher.php"; ?>
             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
             <div id="input_container">
                 <input id="input" class="form-ele" name="search" type="text" placeholder="Chercher commune">
                 <img src="images/search.png" height="20" width="20" id="input_img">
             </div>
             </form>
+            <?php  echo $searchErr; ?>
+            
         </div>
     </section>
 </body>
