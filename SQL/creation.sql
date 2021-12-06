@@ -171,12 +171,13 @@ DELIMITER //
 
 CREATE PROCEDURE augmenter_kilometrage_velo(station_depart INT, station_arrivee INT, reference INT)
 BEGIN
-    declare km;
+declare km INT;
     select DISTANCE into km from ETRE_DISTANT where (NUMERO_STATION_DEPART=station_depart AND NUMERO_STATION_ARRIVEE=station_arrivee); 
     update VELO
-    set VELO.KILOMETRAGE+=km
+    set VELO.KILOMETRAGE=VELO.KILOMETRAGE+km
     where VELO.NUMERO_REFERENCE=reference;
 END //
+
 -- ============================================================
 --   Triggers                                             
 -- ============================================================
@@ -223,7 +224,6 @@ end if;
 end //
 
 
-
 DELIMITER //
 
 create or replace trigger BEFORE_INSERT_EMPRUNT
@@ -234,13 +234,12 @@ declare station int;
 select NUMERO_STATION into station from VELO where NUMERO_REFERENCE=new.NUMERO_REFERENCE;
 if new.NUMERO_STATION_DEPART!=station then
     signal SQLSTATE'45000' set MESSAGE_TEXT= 'Le vélo sélectionné ne se trouve pas dans la station de départ';
-end if;
-CALL validite_dates(new.DATE_DEPART,new.DATE_RETOUR);    
+end if; 
+CALL validite_dates(new.DATE_DEPART,new.DATE_RETOUR);
 if new.NUMERO_USAGER IN (SELECT NUMERO_USAGER from EMPRUNT where EMPRUNT.DATE_RETOUR IS NULL) then
     signal SQLSTATE'45000' set MESSAGE_TEXT= 'Cet usager a déjà un emprunt en cours';
 end if;
 end //
-
 
 DELIMITER //
 
@@ -249,9 +248,10 @@ before UPDATE on EMPRUNT
 for each row
 BEGIN
 if new.DATE_RETOUR!=OLD.DATE_RETOUR then 
-    CALL validite_dates(new.DATE_DEPART,new.DATE_RETOUR);             
+    CALL validite_dates(new.DATE_DEPART,new.DATE_RETOUR);      
 end if;
 end //
+
 
 
 DELIMITER //
@@ -266,4 +266,36 @@ if new.NUMERO_STATION_ARRIVEE!=old.NUMERO_STATION_ARRIVEE then
         CALL augmenter_kilometrage_velo(new.NUMERO_STATION_DEPART,new.NUMERO_STATION_ARRIVEE,new.NUMERO_REFERENCE);
     end if;       
 end if;
+end //
+
+
+DELIMITER //
+
+create or replace trigger BEFORE_DELETE_VELO
+before DELETE on VELO
+for each row
+BEGIN
+    DELETE from EMPRUNT where NUMERO_REFERENCE=old.NUMERO_REFERENCE;
+end //
+
+
+DELIMITER //
+
+create or replace trigger BEFORE_DELETE_USAGER
+before DELETE on USAGER
+for each row
+BEGIN
+    DELETE from EMPRUNT where NUMERO_USAGER=old.NUMERO_USAGER;
+end //
+
+
+DELIMITER //
+
+create or replace trigger BEFORE_DELETE_STATION
+before DELETE on STATION
+for each row
+BEGIN
+    DELETE from EMPRUNT where NUMERO_STATION_DEPART=old.NUMERO_STATION || NUMERO_STATION_ARRIVEE=old.NUMERO_STATION;
+    DELETE from ETRE_DISTANT where NUMERO_STATION_DEPART=old.NUMERO_STATION || NUMERO_STATION_ARRIVEE=old.NUMERO_STATION;
+    DELETE from VELO where NUMERO_STATION=old.NUMERO_STATION;
 end //
