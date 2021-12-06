@@ -1,0 +1,43 @@
+.form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px 0px 20px;
+}
+
+select{
+    width: 200px;
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid darkslategray;
+    margin: 0px 5px 0px 5px;
+
+}
+
+.btn{
+    height: 30px;
+    border:none;
+    background-color: darkcyan;
+    color: whitesmoke;
+    border-radius: 15px;
+    width: 100px;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: darkslategray;
+}
+
+td, th{
+    border: 2px solid black;
+    padding: 10px;
+}
+table{
+    margin-top: 20px;
+    display: flex;
+    transform: translate(25%);
+    text-align: center;
+    width: 70%;
+    border-collapse: collapse;
+}

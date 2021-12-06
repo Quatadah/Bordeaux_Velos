@@ -2,7 +2,7 @@ body{
     background-image: url("../images/background.jpg");
     color: whitesmoke;
     font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 #name-title a{
@@ -47,13 +47,7 @@ header{
     transform: scale(110%);
 }
 
-td, th{
-    border: 2px solid black;
-}
-table{
-    width: 70%;
-    border-collapse: collapse;
-}
+
 section{
     margin-top: 100px;
     color: whitesmoke;
@@ -139,17 +133,17 @@ section{
 }
 
 
-/*
-#a{
+
+.sub{
     text-decoration: none;
     font-size: small;
     color: darkslategray;
 }
 
-#a:hover{
+.sub:hover{
     transform: scale(102%);
 }
-*/
+
 
 
 .error{
