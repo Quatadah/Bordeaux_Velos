@@ -1,0 +1,80 @@
+body{
+    background-image: url("../images/background.jpg") ;
+    background-repeat:initial;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: darkslategray;
+}
+
+#img{
+    border: 5px solid darkslategrey;
+    border-radius: 100%;
+    height: auto;
+    width: auto;
+    max-height: 200px;
+    max-width: 250px;
+}
+
+#img:hover{
+    cursor: pointer;
+    transform: scale(102%);
+}
+
+.container{
+    margin-top: 20px;
+    border-radius: 15px;
+    background-color: white;
+    width: 300px;
+    min-height: 700px;
+    height: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: space-between;
+    transform: translate(50%);
+    text-align: center;
+    
+}
+
+#parag{
+    width: 50%;
+    transform: translate(50%);
+}
+
+#choice-list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.choice-ele{
+    list-style-type: none;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: x-large;
+}
+
+.choice-ele a {
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: darkcyan;
+}
+
+
+
+.choice-ele :hover{
+    background-color: darkslategray;
+}
+
+#retour{
+    text-decoration: none;
+    color: darkslategray;
+}
+
+#container div a:hover{
+    transform: scale(102%);
+}
+

@@ -1,0 +1,46 @@
+body{
+    background-image: url("../images/background.jpg");
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#choix-mode{
+    text-align: center;
+    
+}
+
+.mode-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+    list-style-type: none;
+}
+
+.choix{
+    margin-top: -300px ;
+}
+
+#mrg{
+    margin-right: 30px;
+}
+
+.choix a{
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: darkcyan;
+}
+
+.choix :hover{
+    background-color: darkslategray;
+}
+
+.container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

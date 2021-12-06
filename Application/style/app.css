@@ -134,10 +134,12 @@ section{
 #creer-compte{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
+
+/*
 #a{
     text-decoration: none;
     font-size: small;
@@ -147,6 +149,9 @@ section{
 #a:hover{
     transform: scale(102%);
 }
+*/
+
+
 .error{
     color: red;
 }
