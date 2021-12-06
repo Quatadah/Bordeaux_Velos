@@ -5,7 +5,7 @@
                 <li class="nav-ele"><a href="index.php">Accueil</a></li>|
                 <li class="nav-ele"><a href="about.php">A propos</a></li>
                 <?php if(isset($_SESSION["LOGGED_USER"])) : ?>
-                <li class="nav-ele"><a href="disconnexion.php">Se déconnecter</a></li>
+                |<li class="nav-ele"><a href="disconnexion.php">Se déconnecter</a></li>
                 <?php endif; ?>
             </ul>
         </nav>

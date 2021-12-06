@@ -2,7 +2,8 @@
     height: 250px;
     width: 800px;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     color: darkslategrey;
     background-color: white;

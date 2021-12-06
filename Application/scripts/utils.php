@@ -31,4 +31,19 @@ function getFullNameById($conn, $id) : string{
     $data = $result->fetch_assoc();
     return $data["NOM_USAGER"] . " " . $data["PRENOM_USAGER"];
 }
+
+function queryCommunes($conn) {
+    $sql = "SELECT distinct COMMUNE from FLOTTE_DE_VELOS.STATION;";
+    $result = $conn->query($sql);
+    return [$result->fetch_assoc()["COMMUNE"], $result->fetch_assoc()["COMMUNE"],
+    $result->fetch_assoc()["COMMUNE"]];
+}
+
+function toUpperArrayOfStrings($arrayOfStrings){
+    $newUpperCasedArray = [];
+    foreach($arrayOfStrings as $string){
+        $newUpperCasedArray[] = strtoupper($string);
+    }
+    return $newUpperCasedArray;
+}
 ?>
