@@ -2,7 +2,7 @@
 
 <?php
     include_once "utils.php";
-    include_once "consult_utils.php"
+    include_once "consult_utils.php";
 
     $login = "root";
     $password = "";
@@ -27,8 +27,19 @@
         echo "$sql";
         if (strtoupper($table) == strtoupper("usager")){
             getUsagers($result);
-        }    
-
+        }
+        else if (strtoupper($table) == strtoupper("velo")){
+            getVelos($result);
+        }
+        else if (strtoupper($table) == strtoupper("station")){
+            getStations($result);
+        }
+        else if (strtoupper($table) == strtoupper("emprunt")){
+            getEmprunts($result);
+        }
+        else if (strtoupper($table) == strtoupper("etre_distant")){
+            getEtreDistant($result);
+        }   
     }
     
     
