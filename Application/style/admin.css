@@ -1,7 +1,7 @@
 body{
     background-image: url("../images/background.jpg") ;
     background-repeat:initial;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
     color: darkslategray;
 }
@@ -38,6 +38,7 @@ body{
 }
 
 #parag{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: 50%;
     transform: translate(50%);
 }
@@ -71,7 +72,5 @@ body{
 
 #retour{
     text-decoration: none;
-    color: darkslategray;
+    color:darkslategray;
 }
-
-

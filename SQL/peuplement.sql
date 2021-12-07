@@ -230,7 +230,6 @@ insert into USAGER values ( 56 ,  'PREMINGER' , 'MARIE'        ,  '  ' , '2020-0
 insert into USAGER values ( 57 ,  'PREMINGER' , 'HIND'         ,  '  ' , '2016-01-01'  ) ;
 insert into USAGER values ( 58 ,  'NASDAMI'   , 'QUATADAH'     ,  '  ' , '2020-01-01'  ) ;
 
-*/
 
 --EMPRUNT 
 

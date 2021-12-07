@@ -20,10 +20,10 @@
             <form class="form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
                 <div class="selection">        
         
-                    <select name="table" >
+                    <select name="table" value="--- Choose a table ---">
                         <option value="">--- Choose a table ---</option>
                         <option value="velo">VELOS</option>
-                        <option value="usager" selected>USAGERS</option>
+                        <option value="usager">USAGERS</option>
                         <option value="station">STATIONS</option>
                         <option value="emprunt">EMPRUNTS</option>
                         <option value="etredistant">ETRE DISTANT</option>

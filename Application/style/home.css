@@ -1,5 +1,6 @@
 .container2{
-    height: 250px;
+    min-height: 250px;
+    height: auto;
     width: 800px;
     display: flex;
     flex-direction: column;
@@ -9,6 +10,10 @@
     background-color: white;
     margin-top: -15px;
     border-radius: 20px;
+}
+
+section{
+    margin-top: 0px;
 }
 
 #search-img{
@@ -28,9 +33,37 @@
     margin-right: -30px;
 }
 
-
 #input_container{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.stations{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.station-ele a{
+    text-decoration: none;
+    color: darkslategray;
+}
+
+.station-ele {
+    list-style-type: none;
+}
+
+.station-ele a{
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    width: 400px;
+    height: 30px;
+    box-shadow: 1px 1px 8px black;
+}
+
+.station-ele a:hover{
+    transform: scale(102%);
 }

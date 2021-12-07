@@ -1,6 +1,7 @@
 <?php
 
 include_once "utils.php";
+include_once "utils2.php";
 
 
 $login = "root";
@@ -33,6 +34,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             $searchErr = "Pas de station trouvée pour cette commune";
         } else {
             $searchErr = "Commune trouvée";
+            $stations = getStationsNamesByCommune($conn, $search);
+            echo "<ul class='stations'>";
+            foreach($stations as $station){
+                echo "<li class='station-ele'><a href='#'>$station</a></li>";
+            }
+            echo "</ul>";
         }
     }
 

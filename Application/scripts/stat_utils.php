@@ -30,9 +30,9 @@ function getVelosByStation($result){
         echo "<th>Date de mise en service</th>";
         echo "<th>Niveau de charge</th>";
         echo "<th>N° station</th>";
-    
+        echo "</tr>";
         while($row = $result->fetch_assoc()) {
-            echo "</tr>";
+            
             echo "<tr>";
             echo "<td>" . $row["ADRESSE_STATION"] . "</td>";
             echo "<td>" . $row["NUMERO_REFERENCE"] . "</td>";
@@ -40,7 +40,7 @@ function getVelosByStation($result){
             echo "<td>" . $row["KILOMETRAGE"] . "</td>";
             echo "<td>" . $row["DATE_DE_MISE_EN_SERVICE"] . "</td>";
             echo "<td>" . $row["NIVEAU_CHARGE"] . "</td>";
-            echo "<td>" . $row["VELO.NUMERO_STATION"] . "</td>";
+            echo "<td>" . $row["NUMERO_STATION"] . "</td>";
         
            
             echo "</tr>";   

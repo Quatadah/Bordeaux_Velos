@@ -1,7 +1,7 @@
 body{
     background-image: url("../images/background.jpg");
     color: whitesmoke;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Courier, monospace;
 }
 
 #choix-mode{
