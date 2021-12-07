@@ -46,4 +46,15 @@ function toUpperArrayOfStrings($arrayOfStrings){
     }
     return $newUpperCasedArray;
 }
+
+function strReplaceWeirdChars($string){
+    $string = str_replace(' ', '', $string);
+    $string = str_replace('é', 'e', $string);
+    $string = str_replace('ô', 'o', $string);
+    $string = str_replace('à', 'a', $string);
+    $string = str_replace('è', 'e', $string);
+    $string = str_replace('â', 'a', $string);
+    $string = str_replace('ù', 'u', $string);
+    return $string;
+}
 ?>

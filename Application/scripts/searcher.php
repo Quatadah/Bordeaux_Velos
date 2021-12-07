@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 $postData = $_POST;
 $search = "";
 $searchErr = "";
-
+$station = "";
 
 function communeExists($commune){
     global $conn;
@@ -25,33 +25,37 @@ function communeExists($commune){
     return in_array(strtoupper($commune),$existingCommunes);
 }
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $search = test_input($postData["search"]);
+    $_SESSION["COMMUNE_NAME"] = $search;
     if (empty($search)){
         $searchErr = "Aucune commune n'a été entrée";
     } else {
         if (!communeExists($search)){
             $searchErr = "Pas de station trouvée pour cette commune";
         } else {
-            $searchErr = "Commune trouvée";
             $stations = getStationsNamesByCommune($conn, $search);
             $links = [];
             $i = 0;
+
             foreach ($stations as $station){
-                $links[] = trim($station) . ".php";
+                $links[] = strtolower(strReplaceWeirdChars($station));
                 $i += 1;
             }
 
-            echo "<ul class='stations'>";
+
+
+            $j = 0;
+            echo "<form method='post' action='station.php'>";
+            echo "<div class='stations'>";
             foreach($stations as $station){
-                echo "<li class='station-ele'><a href='#'>$station</a></li>";
+                echo "<button class='btn' type='submit' name='$links[$j]' class='station-ele'>$station</button>";
+                $j += 1;
             }
+            echo "</div>";
+            echo "</form>";
             
-            echo "</ul>";
-            echo count($links);
-            foreach($links as $link){
-                echo "hello $link <br>";
-            }
         }
     }
 

@@ -70,16 +70,4 @@ function getStationsNamesByCommune($conn,$commune){
     return $Array;
 }
 
-function getVelosByStation($conn,$station){
-    $sql = "SELECT * from FLOTTE_DE_VELOS.VELO 
-            where STATION='$station';";
-    $result = $conn->query($sql);
-    $Array=array();
-    while ($row = $result->fetch_assoc()) {
-        array_push($Array,$row);
-     }
-    return $Array;
-}
-
-
 ?>

@@ -11,25 +11,22 @@
     <title>Profil utilisateur</title>
 </head>
 <body>
+    <?php include_once("scripts/station_handler.php"); ?>
     <?php include_once "header.php" ?>
     <section>
         <h1>
             <?php echo "Bienvenue ". $_SESSION["USER_FULLNAME"] ?>
         </h1>
-        <div class="search-title">
-            <img id="search-img" src="images/search.png" alt="logo">
-            <h1>Rechercher</h1>
-        </div>
+
         <div class="container2">
-            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
-            <div id="input_container">
-                <input id="input" class="form-ele" name="search" type="text" placeholder="Chercher commune">
-                <img src="images/search.png" height="20" width="20" id="input_img">
+            <h1 class="titles"><?php echo $_SESSION["STATION_NAME"] ?></h1>
+            <div id="bicycle-img">
+                    <img id="img" src="./images/bike.jpg" alt="velo">
             </div>
+            <h2 class="titles"><?php echo $nbVelosDisponible. " vélos disponibles"; ?></h2>
+            <form class='form' method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
+                <?php showVelosDisponible(); ?>
             </form>
-            <?php include_once "scripts/searcher.php"; ?>
-            <?php  echo $searchErr; ?>
-            
         </div>
     </section>
 </body>
