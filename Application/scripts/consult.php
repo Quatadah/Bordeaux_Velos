@@ -21,7 +21,7 @@
     $sql = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
-        $table = test_input($postData["table"]);
+        $table = $postData["table"];
         $sql = "SELECT * from FLOTTE_DE_VELOS.$table;";
         $result = $conn->query($sql);
         echo "$sql";

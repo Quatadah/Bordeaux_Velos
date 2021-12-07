@@ -35,11 +35,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         } else {
             $searchErr = "Commune trouvée";
             $stations = getStationsNamesByCommune($conn, $search);
+            $links = [];
+            $i = 0;
+            foreach ($stations as $station){
+                $links[] = trim($station) . ".php";
+                $i += 1;
+            }
+
             echo "<ul class='stations'>";
             foreach($stations as $station){
                 echo "<li class='station-ele'><a href='#'>$station</a></li>";
             }
+            
             echo "</ul>";
+            echo count($links);
+            foreach($links as $link){
+                echo "hello $link <br>";
+            }
         }
     }
 

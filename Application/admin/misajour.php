@@ -36,7 +36,7 @@
                     <input name="kilometrage" placeholder="Kilométrage">
                     <input name="ndc" placeholder="Niveau de charge">
                     <input name="nds" placeholder="Numéro de station">
-                    <input class="btn" type="submit" value="Ajouter">
+                    <input class="btn" type="submit" name="ajoutvelo" value="Ajouter">
                 </form>
             <?php endif; ?>
             
@@ -45,7 +45,7 @@
                     <input name="adresse" placeholder="Adresse de station">
                     <input name="ndbornes" placeholder="Nombre de bornes">
                     <input name="commune" placeholder="Commune">
-                    <input class="btn" type="submit" id="ajoutvelo" value="Ajouter">
+                    <input class="btn" type="submit" name="ajoutstation" value="Ajouter">
                 </form>
             <?php endif; ?>
 

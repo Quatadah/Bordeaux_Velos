@@ -22,11 +22,11 @@
         
                     <select name="table" value="--- Choose a table ---">
                         <option value="">--- Choose a table ---</option>
-                        <option value="velo">VELOS</option>
-                        <option value="usager">USAGERS</option>
-                        <option value="station">STATIONS</option>
-                        <option value="emprunt">EMPRUNTS</option>
-                        <option value="etredistant">ETRE DISTANT</option>
+                        <option value="VELO">VELOS</option>
+                        <option value="USAGER">USAGERS</option>
+                        <option value="STATION">STATIONS</option>
+                        <option value="EMPRUNT">EMPRUNTS</option>
+                        <option value="ETRE_DISTANT">ETRE DISTANT</option>
 
                     </select>
                 </div>
