@@ -34,4 +34,18 @@ delete from STATION ;
 delete from EMPRUNT ;
 delete from ETRE_DISTANT ;
 
+
+drop PROCEDURE update_date_retour_emprunt ;
+drop PROCEDURE update_station_retour_emprunt ;
+drop PROCEDURE changer_station_velo ;
+drop PROCEDURE augmenter_kilometrage_velo ;
+drop PROCEDURE supprimer_velo ;
+drop PROCEDURE supprimer_station ;
+drop PROCEDURE supprimer_usager ;
+drop PROCEDURE supprimer_emrpunt ; 
+drop PROCEDURE augmenter_niveau_charge ;
+drop PROCEDURE diminuer_niveau_charge ; 
+
+
+
 commit ;

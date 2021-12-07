@@ -158,25 +158,6 @@ if date2 is not null then
 end if; 
 END //
 
-DELIMITER //
-
-CREATE PROCEDURE changer_station_velo(station INT, reference INT) 
-BEGIN
-    update VELO 
-    set VELO.NUMERO_STATION=station
-    where VELO.NUMERO_REFERENCE=reference;
-END //
-
-DELIMITER //
-
-CREATE PROCEDURE augmenter_kilometrage_velo(station_depart INT, station_arrivee INT, reference INT)
-BEGIN
-declare km INT;
-    select DISTANCE into km from ETRE_DISTANT where (NUMERO_STATION_DEPART=station_depart AND NUMERO_STATION_ARRIVEE=station_arrivee); 
-    update VELO
-    set VELO.KILOMETRAGE=VELO.KILOMETRAGE+km
-    where VELO.NUMERO_REFERENCE=reference;
-END //
 
 -- ============================================================
 --   Triggers                                             
