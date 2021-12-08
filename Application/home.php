@@ -1,4 +1,41 @@
-<?php if(!isset($_SESSION["LOGGED_USER"])) session_start() ?>
+<?php 
+if(!isset($_SESSION["LOGGED_USER"])){ 
+    session_start();
+    /*
+    include_once "scripts/utils.php";
+    $login = "root";
+    $password = "";
+    $servername = "localhost";
+
+    //create connetion
+    $conn = new mysqli($servername, $login, $password);
+
+    //check connection
+    if ($conn->connect_error) {
+        die("Connection failed :" . $conn->connect_error);
+    }
+
+    $id = $_SESSION["LOGGED_USER"];
+    $sql = "SELECT FLOTTE_DE_VELOS.EMPRUNT.* from FLOTTE_DE_VELOS.EMPRUNT 
+            where NUMERO_USAGER = '$id' and NUMERO_STATION_ARRIVEE = NULL;";
+    $result = $conn->query($sql);
+        $row = $result->fetch_assoc();
+        $_SESSION["NUM_VELO_EMPRUNTE"] = $row["NUMERO_REFERENCE"];
+        $_SESSION["EMPRUNT"] = True;
+        $_SESSION["DATE_EMPRUNT"] = $row["DATE_DEPART"];
+        $_SESSION["STATION_NAME"] = getStationNameById($row["STATION_NAME_DEPART"]);
+
+    echo $row["NUMERO_REFERENCE"];  
+    */
+    if (isset($_SESSION["EMPRUNT"])){
+        $host  = $_SERVER['HTTP_HOST'];
+        $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+        $extra = 'emprunt.php';
+        header("Location: http://$host$uri/$extra");
+        exit;   
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

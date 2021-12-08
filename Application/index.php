@@ -1,4 +1,13 @@
-<?php session_start() ?>
+<?php 
+session_start();
+if (isset($_SESSION["EMPRUNT"])){
+    $host  = $_SERVER['HTTP_HOST'];
+    $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+    $extra = 'emprunt.php';
+    header("Location: http://$host$uri/$extra");
+    exit; 
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,8 +41,8 @@
 
                         <div id="creer-compte">
                             <p>Vous êtes un nouvel utilisateur ?</p>
-                            <a class="sub" href="connexion.php">Créer un compte</a>
-                            <a class="sub" href="mode.php">Retourner vers choix du mode</a>
+                            <a id="a" href="connexion.php">Créer un compte</a>
+                            <a id="a" href="mode.php">Retourner vers choix du mode</a>
                         </div>
                     </div>
                 </div>

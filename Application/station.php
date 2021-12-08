@@ -1,4 +1,4 @@
-<?php if(!isset($_SESSION["LOGGED_USER"])) session_start() ?>
+<?php if(!isset($_SESSION["LOGGED_USER"])) session_start();  unset($_SESSION["DATE_EMPRUNT"]); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +24,7 @@
                     <img id="img" src="./images/bike.jpg" alt="velo">
             </div>
             <h2 class="titles"><?php echo $nbVelosDisponible. " vélos disponibles"; ?></h2>
-            <form class='form' method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" >
+            <form class='form' method="post" action="emprunt.php" >
                 <?php showVelosDisponible(); ?>
             </form>
         </div>

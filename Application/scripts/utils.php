@@ -57,4 +57,24 @@ function strReplaceWeirdChars($string){
     $string = str_replace('ù', 'u', $string);
     return $string;
 }
+
+function getStationIdByName($stationName){
+    global $conn;
+    $sql= "SELECT NUMERO_STATION from FLOTTE_DE_VELOS.STATION
+            where STATION.ADRESSE_STATION = '$stationName' ";
+    $result = $conn->query($sql);
+    return $result->fetch_assoc()["NUMERO_STATION"];
+}
+
+function getStationNameById($stationId){
+    global $conn;
+    $sql= "SELECT ADRESSE_STATION from FLOTTE_DE_VELOS.STATION
+            where STATION.NUMERO_STATION = '$stationId' ";
+    $result = $conn->query($sql);
+    return $result->fetch_assoc()["ADRESSE_STATION"];
+}
+
+function freeSessionAttributes(){
+    unset($_SESSION["DATE_EMPRUNT"]);
+}
 ?>

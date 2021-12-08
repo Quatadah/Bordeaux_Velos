@@ -31,7 +31,7 @@
             </form>
             <?php include "../scripts/maj.php" ?>
             <?php if ($maj == "ajoutvelo"): ?>
-                <form class="maj-form" method="post"  action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"> 
+                <form class="maj-form" method="post"  action="ajoutvelo.php"> 
                     <input name="marque" placeholder="Marque">
                     <input name="kilometrage" placeholder="Kilométrage">
                     <input name="ndc" placeholder="Niveau de charge">
@@ -41,23 +41,23 @@
             <?php endif; ?>
             
             <?php if ($maj == "ajoutstation"): ?>
-                <form class="maj-form" method="post"  action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"> 
+                <form class="maj-form" method="post"  action="ajoutstation.php"> 
                     <input name="adresse" placeholder="Adresse de station">
                     <input name="ndbornes" placeholder="Nombre de bornes">
                     <input name="commune" placeholder="Commune">
-                    <input class="btn" type="submit" name="ajoutstation" value="Ajouter">
+                    <input class="btn" type="submit" id="ajoutstation" value="Ajouter">
                 </form>
             <?php endif; ?>
 
             <?php if ($maj == "supprimevelo"): ?>
-                <form class="maj-form" method="post"  action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"> 
+                <form class="maj-form" method="post"  action="supprimevelo.php"> 
                     <input name="numrefvelo" placeholder="Numéro de référence du vélo">
                     <input class="btn" type="submit" value="Supprimer">
                 </form>
             <?php endif; ?>
 
             <?php if ($maj == "supprimestation"): ?>
-                <form class="maj-form" method="post"  action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>"> 
+                <form class="maj-form" method="post"  action="supprimestation.php"> 
                     <input name="numrefstation" placeholder="Numéro de référence de la station">
                     <input class="btn" type="submit" value="Supprimer">
                 </form>

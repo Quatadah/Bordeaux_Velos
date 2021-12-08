@@ -10,7 +10,16 @@
 </head>
 <body>
     <?php include "header.php"; ?>
-    This project is done by : <br>
-    Nasdami Quatadah - Ghofrane Hamdouni - Doha Sadiq
+    <section>
+    
+        <div class="container">
+            <div id="bicycle-img">
+                    <img id="img" src="./images/bike.jpg" alt="velo">
+            </div>
+            <div>
+                <p> Ce projet a été réalisée par : Quatadah Nasdami - Doha Sadiq - Ghofrane Hamdouni
+            </div>
+        </div>
+    </section>
 </body>
 </html>

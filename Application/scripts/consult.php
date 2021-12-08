@@ -24,7 +24,7 @@
         $table = $postData["table"];
         $sql = "SELECT * from FLOTTE_DE_VELOS.$table;";
         $result = $conn->query($sql);
-        echo "$sql";
+
         if (strtoupper($table) == strtoupper("usager")){
             getUsagers($result);
         }

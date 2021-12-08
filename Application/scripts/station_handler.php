@@ -50,7 +50,7 @@
             $velo_info = $velo['NUMERO_REFERENCE']." ".$velo['MARQUE']." ".$velo['KILOMETRAGE']." ".$velo['NIVEAU_CHARGE']."%";
             $ref = strval($velo['NUMERO_REFERENCE']);
             echo "<label class='velo-container'>". $velo_info;
-            echo "<input type='radio' name='radio' value='$ref' >";
+            echo "<input type='radio' name='$ref'  >";
             echo "<span class='checkmark'></span>";
             echo "</label>";
         }

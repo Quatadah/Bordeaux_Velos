@@ -118,6 +118,7 @@ section{
     width: auto;
     max-height: 300px;
     max-width: 350px;
+    margin: 5px;
 }
 
 #img:hover{
@@ -150,3 +151,8 @@ section{
     color: red;
 }
 
+
+p{
+    margin: 20px;
+    font-size: larger;
+}
