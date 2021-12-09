@@ -1,41 +1,16 @@
-body{
-    background-image: url("../images/background.jpg");
-    color: whitesmoke;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Courier, monospace;
-}
-
 #choix-mode{
     text-align: center;
 }
 
-#choix-mode h1{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.mode-list{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
 li{
     list-style-type: none;
 }
 
-
 #mrg{
     margin-right: 30px;
 }
 
-#parag{
-    position: relative;
-    bottom: 80px;
-}
-
-#parag p{
-    font-size: medium;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-}
 .choix{
     position: relative;
     bottom: 150px;
@@ -55,8 +30,3 @@ li{
     background-color: darkslategray;
 }
 
-.container{
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
