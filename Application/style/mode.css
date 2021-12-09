@@ -11,6 +11,7 @@ body{
 
 .mode-list{
     display: flex;
+    flex-direction: co;
     justify-content: center;
     align-items: center;
 }
@@ -27,7 +28,7 @@ li{
     margin-right: 30px;
 }
 
-.choix a{
+.choix{
     text-decoration: none;
     color: whitesmoke;
     padding: 10px;
