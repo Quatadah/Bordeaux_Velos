@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $firstnameErr = "Le champ prénom est requis";
     }
     
-    $address = test_input($postData["address"]);
+    $address = $postData["address"];
     if (empty($address)){
         $addressErr = "Le champ adresse est requis";
     }
