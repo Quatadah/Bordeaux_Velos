@@ -59,7 +59,7 @@ create table STATION
 create table EMPRUNT
 (
     NUMERO_EMPRUNT                  INT(3)              not null AUTO_INCREMENT,
-    DATE_DEPART               DATETIME                  default DATE(NOW()),
+    DATE_DEPART               DATETIME                  default NOW(),
     DATE_RETOUR               DATETIME                           ,
     NUMERO_USAGER             INT(4)                      not null,
     NUMERO_REFERENCE          INT(4)                      not null,

@@ -1,19 +1,12 @@
 
 DELIMITER //
-CREATE OR REPLACE PROCEDURE update_date_retour_emprunt(date_retour DATETIME, numero_emprunt INT ) 
+CREATE OR REPLACE PROCEDURE retourner_emprunt(date_retour DATETIME,station INT, numero_emprunt INT ) 
 BEGIN
     update EMPRUNT 
     SET EMPRUNT.DATE_RETOUR= date_retour
     WHERE EMPRUNT.NUMERO_EMPRUNT=numero_emprunt;
-END // 
-
-
-
-DELIMITER //
-CREATE OR REPLACE PROCEDURE update_station_retour_emprunt(station INT, numero_emprunt INT ) 
-BEGIN
     update EMPRUNT 
-    SET EMPRUNT.STATION_DEPART = station
+    SET EMPRUNT.STATION_RETOUR = station
     WHERE EMPRUNT.NUMERO_EMPRUNT=numero_emprunt;
 END // 
 
