@@ -23,9 +23,11 @@ group by VELO.NUMERO_REFERENCE
 ) A;
 
 --classement des stations par nombre de places disponibles par commune
-SELECT *
-from STATION
-order by COMMUNE,NOMBRE_BORNES desc;
+SELECT STATION.*, NOMBRE_BORNES-count(*) as NBR_PLACES_DISPONIBLES
+from STATION inner join VELO
+on STATION.NUMERO_STATION=VELO.NUMERO_STATION
+group by STATION.NUMERO_STATION
+order by COMMUNE,NBR_PLACES_DISPONIBLES desc;
 
 --classement des vélos les plus chargés par station
 SELECT STATION.ADRESSE_STATION, VELO.*

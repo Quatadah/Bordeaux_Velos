@@ -35,7 +35,7 @@ create table USAGER
     NUMERO_USAGER                   INT(4)              not null AUTO_INCREMENT,
     NOM_USAGER                      CHAR(20)               not null,
     PRENOM_USAGER                   CHAR(20)                not null,
-    ADRESSE_USAGER                  CHAR(20)                       ,
+    ADRESSE_USAGER                  CHAR(100)                       ,
     DATE_ADHESION                    DATE                         default DATE(NOW())  ,
     constraint pk_usager primary key (NUMERO_USAGER)
 ); 
@@ -46,7 +46,7 @@ create table USAGER
 create table STATION
 (
     NUMERO_STATION                   INT(4)              not null AUTO_INCREMENT,
-    ADRESSE_STATION                  CHAR(20)              unique    not null ,
+    ADRESSE_STATION                  CHAR(100)              unique    not null ,
     NOMBRE_BORNES                    INT(4)             not null CHECK(NOMBRE_BORNES>=0),
     COMMUNE                          CHAR(20)                     not null,
     constraint pk_station primary key (NUMERO_STATION)
