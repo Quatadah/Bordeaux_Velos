@@ -14,9 +14,9 @@ d’installation.
 
 - Sur le terminal, dans le répertoire où vous l’avez télécharger, exéuter 
     ```bash
-        $sudo ./xampp.run
+        $sudo 
     ```
-- Puis exécuter la commande suivante: 
+- Par défaut, sous linux, l'environnement Xampp se télécharge au répértoire /opt/, dans votre terminal, exécuter la commande suivante: 
     ```bash
         $sudo /opt/lampp/lampp start
     ```
@@ -47,3 +47,4 @@ Il faut copier le dossier Application et le déposer dans le serveur web. Pour c
     ```
 
 - Pour accéder à l'interface, rendez vous à l'adresse http://localhost/Application
+
