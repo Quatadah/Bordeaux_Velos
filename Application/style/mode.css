@@ -6,12 +6,14 @@ body{
 
 #choix-mode{
     text-align: center;
-    
 }
 
+#choix-mode h1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 .mode-list{
     display: flex;
-    flex-direction: co;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -20,15 +22,28 @@ li{
     list-style-type: none;
 }
 
-.choix{
-    margin-top: -300px ;
-}
 
 #mrg{
     margin-right: 30px;
 }
 
+#parag{
+    position: relative;
+    bottom: 80px;
+}
+
+#parag p{
+    font-size: medium;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
 .choix{
+    position: relative;
+    bottom: 150px;
+    right: 15px;
+    margin: 15px;
+}
+
+.choix a{
     text-decoration: none;
     color: whitesmoke;
     padding: 10px;

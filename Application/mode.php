@@ -16,8 +16,12 @@
             <div id="choix-mode">
                 <h1>Choix du mode</h1>
             </div>
+            <div id="parag">
+                <p>
+                    Choississez le mode selon lequel vous voulez utiliser l'application </p>
+            </div>  
             <ul class="mode-list">
-                <li class="choix" id="mrg"><a href="index.php">Utilisateur</a></li>
+                <li class="choix"><a href="index.php">Utilisateur</a></li>
                 <li class="choix"><a href="admin/admin.php">Administrateur</a></li>
             </ul>
         </div>
