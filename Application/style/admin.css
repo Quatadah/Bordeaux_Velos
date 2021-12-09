@@ -1,23 +1,8 @@
 body{
     background-image: url("../images/background.jpg") ;
-    background-repeat:initial;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
     color: darkslategray;
-}
-
-#img{
-    border: 5px solid darkslategrey;
-    border-radius: 100%;
-    height: auto;
-    width: auto;
-    max-height: 200px;
-    max-width: 250px;
-}
-
-#img:hover{
-    cursor: pointer;
-    transform: scale(102%);
 }
 
 .container{

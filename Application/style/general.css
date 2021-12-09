@@ -1,0 +1,43 @@
+
+
+#img{
+    border: 5px solid darkslategrey;
+    border-radius: 100%;
+    height: auto;
+    width: auto;
+    max-height: 300px;
+    max-width: 350px;
+    margin: 5px;
+}
+
+#img:hover{
+    cursor: pointer;
+    transform: scale(102%);
+}
+
+.sub{
+    text-decoration: none;
+    font-size: small;
+    color: darkslategray;
+}
+
+.sub:hover{
+    color:red;
+    transform: scale(102%);
+}
+
+
+.btn{
+    margin-top: 10px;
+    color: white;
+    padding: 3px;
+    text-decoration: none;
+    border: 1px solid darkcyan;
+    border-radius: 15px;
+    background-color: darkcyan;
+}
+
+.btn:hover{
+    cursor: pointer;
+    background-color: darkslategrey;
+}

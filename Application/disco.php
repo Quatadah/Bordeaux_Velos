@@ -1,3 +1,0 @@
-<?php 
-$_SESSION["DISCONNECTED"] = TRUE;
-?>

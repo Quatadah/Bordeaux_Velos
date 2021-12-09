@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/admin.css">
+    <link rel="stylesheet" href="../style/general.css">
     <link rel="stylesheet" href="../style/consultations.css">
     <title>Statistiques</title>
 </head>
@@ -31,7 +32,7 @@
             </form>
             <?php include "../scripts/statistiques.php" ?>
             <div>
-                <a id="retour" href="../mode.php">Retourner vers le choix de mode</a>
+                <a class="sub" href="../mode.php">Retourner vers le choix de mode</a>
             </div>
         
         </div>

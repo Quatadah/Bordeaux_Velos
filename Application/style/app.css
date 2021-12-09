@@ -96,7 +96,6 @@ section{
     cursor: pointer;
     background-color: darkslategrey;
 }
-
 .container{
     height: 500px;
     width: 800px;
@@ -111,21 +110,6 @@ section{
 }
 
 
-#img{
-    border: 5px solid darkslategrey;
-    border-radius: 100%;
-    height: auto;
-    width: auto;
-    max-height: 300px;
-    max-width: 350px;
-    margin: 5px;
-}
-
-#img:hover{
-    cursor: pointer;
-    transform: scale(102%);
-}
-
 #creer-compte{
     display: flex;
     flex-direction: column;
@@ -133,17 +117,6 @@ section{
     align-items: center;
 }
 
-
-
-.sub{
-    text-decoration: none;
-    font-size: small;
-    color: darkslategray;
-}
-
-.sub:hover{
-    transform: scale(102%);
-}
 
 
 

@@ -41,8 +41,8 @@ if (isset($_SESSION["EMPRUNT"])){
 
                         <div id="creer-compte">
                             <p>Vous êtes un nouvel utilisateur ?</p>
-                            <a id="a" href="connexion.php">Créer un compte</a>
-                            <a id="a" href="mode.php">Retourner vers choix du mode</a>
+                            <a class="sub" href="connexion.php">Créer un compte</a>
+                            <a class="sub" href="mode.php">Retourner vers choix du mode</a>
                         </div>
                     </div>
                 </div>

@@ -4,14 +4,3 @@
     justify-content: center;
     align-items: center;
 }
-
-#se-connecter{
-    margin-top: 30px;
-    text-decoration: none;
-    font-size: smaller;
-    color: darkslategray;
-}
-
-#se-connecter:hover{
-    transform: scale(102%);
-}
