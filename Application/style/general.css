@@ -28,6 +28,10 @@
 
 
 .btn{
+    position: relative;
+    bottom: 6px;
+    width: 100px;
+    height: 30px;
     margin-top: 10px;
     color: white;
     padding: 3px;
