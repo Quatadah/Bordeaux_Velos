@@ -1,21 +1,21 @@
 
--- STATION
-
-insert into STATION values ( 1 ,  'Arts et métiers',  10,  'Talence' );
-insert into STATION values ( 2 ,  'Béthanie',  8,  'Talence' );
-insert into STATION values ( 3 ,  'Forum',  10,  'Talence' );
-insert into STATION values ( 4 ,  'Roustaing',  8,  'Talence' );
-insert into STATION values ( 5 ,  'France Alouette',  8,  'Pessac' );
-insert into STATION values ( 6 ,  'Bergnonié',  8,  'Bordeaux' );
-insert into STATION values ( 7 ,  'Saint-Nicolas',  10,  'Bordeaux' );
-insert into STATION values ( 8 ,  'Victoire',  10,  'Bordeaux' );
-insert into STATION values ( 9 ,  'Musée daquitaine',  10,  'Bordeaux' );
-insert into STATION values ( 10 ,  'Hôtel de ville',  10,  'Bordeaux' );
-insert into STATION values ( 11 ,  'Gambetta',  10,  'Bordeaux' );
-insert into STATION values ( 12 ,  'Grand théâtre',  10,  'Bordeaux' ); 
 
 
--- VELO
+insert into STATION values ( 1 ,  'Arts et métiers',  20,  'Talence' );
+insert into STATION values ( 2 ,  'Béthanie',  10,  'Talence' );
+insert into STATION values ( 3 ,  'Forum',  20,  'Talence' );
+insert into STATION values ( 4 ,  'Roustaing',  18,  'Talence' );
+insert into STATION values ( 5 ,  'France Alouette',  18,  'Pessac' );
+insert into STATION values ( 6 ,  'Bergnonié',  18,  'Bordeaux' );
+insert into STATION values ( 7 ,  'Saint-Nicolas',  12,  'Bordeaux' );
+insert into STATION values ( 8 ,  'Victoire',  12,  'Bordeaux' );
+insert into STATION values ( 9 ,  'Musée daquitaine',  12,  'Bordeaux' );
+insert into STATION values ( 10 ,  'Hôtel de ville',  12,  'Bordeaux' );
+insert into STATION values ( 11 ,  'Gambetta',  12,  'Bordeaux' );
+insert into STATION values ( 12 ,  'Grand théâtre',  12,  'Bordeaux' ); 
+
+
+
 
 
 insert into VELO values ( 1,  'O2Feel'   ,  20000 ,  '2016-02-01',  50 ,  1  );
@@ -168,9 +168,6 @@ insert into VELO values ( 113, 'Eovolt', 328246   , '2017-01-09', 75, 7 );
 insert into VELO values ( 114, 'Eovolt', 65972    , '2017-01-09', 75, 1 );
 
 
--- USAGER
-
-
 insert into USAGER values (  1 ,  'MONTAND'   ,  'YVES'        ,  '  ' ,  '2021-11-13' ) ;
 insert into USAGER values (  2 ,  'GARCIA'    ,  'NICOLE'      ,  '  ' ,  '2015-02-21' ) ;
 insert into USAGER values (  3 ,  'VILLERET'  ,  'JACQUES'     ,  '  ' ,  '2017-09-12' ) ;
@@ -231,31 +228,29 @@ insert into USAGER values ( 57 ,  'PREMINGER' , 'HIND'         ,  '  ' , '2016-0
 insert into USAGER values ( 58 ,  'NASDAMI'   , 'QUATADAH'     ,  '  ' , '2020-01-01'  ) ;
 
 
---EMPRUNT 
 
-insert into EMPRUNT values ( 1, '2021-11-01 08:30:00', '2021-11-11 18:24:56', 10, 112, 5, 8 );
-insert into EMPRUNT values ( 2, '2021-08-19 10:45:23', '2021-09-14 16:15:51', 2, 102, 7, 2 );
-insert into EMPRUNT values ( 3, '2021-10-01 15:46:08', '2021-10-31 22:06:03', 1, 42, 1, 1 );
-insert into EMPRUNT values ( 4, '2021-11-24 10:36:02', '2021-11-26 14:24:56', 24, 22, 11, 8 );
-insert into EMPRUNT values ( 5, '2021-12-01 20:46:03', '2021-12-01 23:49:32', 6, 96, 10, 2 );
-insert into EMPRUNT values ( 6, '2021-10-24 13:02:00', '2021-11-06 12:49:03', 24, 22, 11, 8 );
-insert into EMPRUNT values ( 7, '2021-11-24 07:12:03', '2021-11-26 12:46:32', 52, 82, 2, 1 );
-insert into EMPRUNT values ( 8, '2021-11-24 12:12:06', '2021-11-26 05:06:32', 45, 107, 2, 9 );
-insert into EMPRUNT values ( 9, '2021-11-12 07:12:03', '2021-11-12 12:08:32', 20, 46, 7, 7 );
-insert into EMPRUNT values ( 10, '2021-11-30 09:12:03', '2021-12-01 18:28:52', 28, 28, 10, 10 );
-insert into EMPRUNT values ( 11, '2021-11-28 08:30:00', '2021-11-28 18:24:56', 3, 102, 8, 8 );
-insert into EMPRUNT values ( 12, '2021-10-12 10:45:23', '2021-10-31 16:15:51', 8, 12, 3, 2 );
-insert into EMPRUNT values ( 13, '2021-10-12 15:46:08', '2021-10-31 22:06:03', 6, 18, 10, 9 );
-insert into EMPRUNT values ( 14, '2021-12-02 10:36:02', null, 4, 18, 11, 8 );
-insert into EMPRUNT values ( 15, '2021-12-01 20:48:03', '2021-12-01 23:49:32', 6, 96, 10, 2 );
-insert into EMPRUNT values ( 16, '2021-12-02 13:02:00', null, 24, 22, 11, 8 );
-insert into EMPRUNT values ( 17, '2021-12-02 07:12:03', null, 56, 92, 2, 1 );
-insert into EMPRUNT values ( 18, '2021-11-13 12:12:06', '2021-11-28 15:06:32', 7, 107, 2, 9 );
-insert into EMPRUNT values ( 19, '2021-11-12 07:12:03', '2021-11-12 12:08:32', 5, 46, 7, 6 );
-insert into EMPRUNT values ( 20, '2021-11-30 09:12:03', '2021-11-30 19:28:52', 11, 28, 10, 1 );
-insert into EMPRUNT values ( 21, '2021-11-30 20:12:03', '2021-11-30 22:28:52', 11, 29, 11, 12 );
+insert into EMPRUNT values ( 1, '2021-11-01 08:30:00', '2021-11-11 18:24:56', 10, 112, 10, 8 );
+insert into EMPRUNT values ( 2, '2021-08-19 10:45:23', '2021-09-14 16:15:51', 2, 102, 4, 2 );
+insert into EMPRUNT values ( 3, '2021-10-01 15:46:08', '2021-10-31 22:06:03', 1, 42, 2, 1 );
+insert into EMPRUNT values ( 4, '2021-11-24 10:36:02', '2021-11-26 14:24:56', 24, 22, 3, 8 );
+insert into EMPRUNT values ( 5, '2021-12-01 20:46:03', '2021-12-01 23:49:32', 6, 96, 11, 2 );
+insert into EMPRUNT values ( 6, '2021-10-24 13:02:00', '2021-11-06 12:49:03', 24, 97, 9, 8 );
+insert into EMPRUNT values ( 7, '2021-11-24 07:12:03', '2021-11-26 12:46:32', 52, 88, 10, 1 );
+insert into EMPRUNT values ( 8, '2021-11-24 12:12:06', '2021-11-26 05:06:32', 45, 107, 1, 9 );
+insert into EMPRUNT values ( 9, '2021-11-12 07:12:03', '2021-11-12 12:08:32', 20, 114, 1, 7 );
+insert into EMPRUNT values ( 10, '2021-11-30 09:12:03', '2021-12-01 18:28:52', 28, 28, 4, 10 );
+insert into EMPRUNT values ( 11, '2021-11-28 08:30:00', '2021-11-28 18:24:56', 3, 31, 4, 8 );
+insert into EMPRUNT values ( 12, '2021-10-12 10:45:23', '2021-10-31 16:15:51', 8, 15, 5, 2 );
+insert into EMPRUNT values ( 13, '2021-10-12 15:46:08', '2021-10-31 22:06:03', 6, 18, 3, 9 );
+insert into EMPRUNT values ( 14, '2021-12-02 10:36:02', null, 4, 18, 9, 8 );
+insert into EMPRUNT values ( 15, '2021-12-01 20:48:03', '2021-12-01 23:49:32', 6, 96, 2, 8 );
+insert into EMPRUNT values ( 16, '2021-12-02 13:02:00', null, 24, 92, 10, 8 );
+insert into EMPRUNT values ( 17, '2021-12-02 07:12:03', null, 56, 93, 8, 1 );
+insert into EMPRUNT values ( 18, '2021-11-13 12:12:06', '2021-11-28 15:06:32', 7, 100, 6, 9 );
+insert into EMPRUNT values ( 19, '2021-11-12 07:12:03', '2021-11-12 12:08:32', 5, 62, 11, 6 );
+insert into EMPRUNT values ( 20, '2021-11-30 09:12:03', '2021-11-30 19:28:52', 11, 70, 12, 1 );
+insert into EMPRUNT values ( 21, '2021-11-30 20:12:03', '2021-11-30 22:28:52', 11, 29, 5, 12 );
 
---ETRE_DISTANT
 
 
 

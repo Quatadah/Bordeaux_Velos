@@ -13,9 +13,9 @@ create table VELO
 (
     NUMERO_REFERENCE                INT(3)              not null AUTO_INCREMENT,
     MARQUE                          CHAR(20)                       ,                      
-    KILOMETRAGE                     INT(6)                       ,
-    DATE_DE_MISE_EN_SERVICE         DATE                           ,
-    NIVEAU_CHARGE                   DECIMAL(4)                      ,
+    KILOMETRAGE                     INT(6)         CHECK(KILOMETRAGE>=0),
+    DATE_DE_MISE_EN_SERVICE         DATE                      default DATE(NOW())     ,
+    NIVEAU_CHARGE                   DECIMAL(4)      CHECK(NIVEAU_CHARGE BETWEEN 0 AND 100),
     NUMERO_STATION                  INT(4)                        ,
     constraint pk_velo primary key (NUMERO_REFERENCE)
 ); 
@@ -34,9 +34,9 @@ create table USAGER
 (
     NUMERO_USAGER                   INT(4)              not null AUTO_INCREMENT,
     NOM_USAGER                      CHAR(20)               not null,
-    PRENOM_USAGER                   CHAR(20)                       ,
+    PRENOM_USAGER                   CHAR(20)                not null,
     ADRESSE_USAGER                  CHAR(20)                       ,
-    DATE_ADHESION                    DATE                           ,
+    DATE_ADHESION                    DATE                         default DATE(NOW())  ,
     constraint pk_usager primary key (NUMERO_USAGER)
 ); 
 
@@ -46,9 +46,9 @@ create table USAGER
 create table STATION
 (
     NUMERO_STATION                   INT(4)              not null AUTO_INCREMENT,
-    ADRESSE_STATION                  CHAR(20)                       ,
-    NOMBRE_BORNES                    INT(4)                      ,
-    COMMUNE                          CHAR(20)                       ,
+    ADRESSE_STATION                  CHAR(20)              unique    not null ,
+    NOMBRE_BORNES                    INT(4)             not null CHECK(NOMBRE_BORNES>=0),
+    COMMUNE                          CHAR(20)                     not null,
     constraint pk_station primary key (NUMERO_STATION)
 ); 
 
@@ -59,7 +59,7 @@ create table STATION
 create table EMPRUNT
 (
     NUMERO_EMPRUNT                  INT(3)              not null AUTO_INCREMENT,
-    DATE_DEPART               DATETIME                          ,
+    DATE_DEPART               DATETIME                  default DATE(NOW()),
     DATE_RETOUR               DATETIME                           ,
     NUMERO_USAGER             INT(4)                      not null,
     NUMERO_REFERENCE          INT(4)                      not null,
@@ -97,7 +97,7 @@ create table ETRE_DISTANT
 (
     NUMERO_STATION_DEPART            INT(4)               not null,
     NUMERO_STATION_ARRIVEE            INT(4)              not null, 
-    DISTANCE                          DECIMAL(4)                                      ,
+    DISTANCE                          DECIMAL(4)                   ,
     constraint pk_etre_distant primary key (NUMERO_STATION_DEPART, NUMERO_STATION_ARRIVEE)
 );
 
@@ -163,7 +163,7 @@ END //
 --   Triggers                                             
 -- ============================================================
 
---Avant toute insertion dans velo: vérifier que nombre de bornes de la station du velo n'est pas atteint 
+
 DELIMITER //
 
 create or replace trigger NOMBRE_BORNES
@@ -179,7 +179,7 @@ begin
     end if;
 end //
 
---ajout d'un emprunt sans date de retour: la nouvelle valeur de la station du vélo devient null 
+
 DELIMITER //
 
 create or replace trigger TAKE_VELO
@@ -191,7 +191,7 @@ if new.DATE_RETOUR is null then
 end if;
 end //
 
---ajout d'un emprunt avec date de retour: changer la station du velo + augmenter son kilometrage
+
 DELIMITER //
 
 create or replace trigger RETURN_VELO
@@ -242,10 +242,8 @@ after UPDATE on EMPRUNT
 for each row
 BEGIN
 if new.NUMERO_STATION_ARRIVEE!=old.NUMERO_STATION_ARRIVEE then 
-    if new.DATE_RETOUR is not null then 
-        CALL changer_station_velo(new.NUMERO_STATION_ARRIVEE,new.NUMERO_REFERENCE);
-        CALL augmenter_kilometrage_velo(new.NUMERO_STATION_DEPART,new.NUMERO_STATION_ARRIVEE,new.NUMERO_REFERENCE);
-    end if;       
+    CALL changer_station_velo(new.NUMERO_STATION_ARRIVEE,new.NUMERO_REFERENCE);
+    CALL augmenter_kilometrage_velo(new.NUMERO_STATION_DEPART,new.NUMERO_STATION_ARRIVEE,new.NUMERO_REFERENCE);
 end if;
 end //
 
