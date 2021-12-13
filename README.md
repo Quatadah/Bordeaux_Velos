@@ -14,7 +14,7 @@ d’installation.
 
 - Sur le terminal, dans le répertoire où vous l’avez télécharger, exéuter 
     ```bash
-        $sudo 
+        $sudo ./xampp.run
     ```
 - Par défaut, sous linux, l'environnement Xampp se télécharge au répértoire /opt/, dans votre terminal, exécuter la commande suivante: 
     ```bash
